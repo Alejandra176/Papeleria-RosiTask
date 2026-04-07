@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Editar Egreso - Pago Nómina</title>
+  <link rel="stylesheet" href="estilo-EgresoPagoNomina.css">
+</head>
+<body>
+  <div class="header-registrar">
+    <h1>Editar Egreso - Pago Nómina</h1>
+  </div>
+
+  <form class="formulario">
+
+    <!-- Sección EGRESO -->
+    <div class="header-id">ID del egreso: 3</div>
+
+    <div class="campo">
+      <label for="fechaEgreso">Fecha</label>
+      <input type="date" id="fechaEgreso" name="fechaEgreso">
+    </div>
+
+    <div class="campo">
+      <label for="valorEgreso">Valor</label>
+      <input type="text" id="valorEgreso" name="valorEgreso">
+    </div>
+
+    <div class="campo">
+      <label for="metodoEgreso">Método de pago</label>
+      <select id="metodoEgreso" name="metodoEgreso">
+        <option value="">Seleccione</option>
+        <option value="efectivo">Efectivo</option>
+        <option value="transferencia">Otro</option>
+      </select>
+    </div>
+
+    <!-- Sección Pago Nómina -->
+    <div class="header-id">Pago Nómina</div>
+
+    <div class="campo">
+      <label for="idPagoNomina">ID del pago</label>
+      <input type="text" id="idPagoNomina" name="idPagoNomina" readonly>
+    </div>
+
+    <div class="campo">
+      <label for="empleado">Empleado</label>
+      <input type="text" id="empleado" name="empleado">
+    </div>
+
+    <div class="campo">
+      <label for="cargo">Cargo</label>
+      <input type="text" id="cargo" name="cargo">
+    </div>
+
+    <div class="campo">
+      <label for="correo">Correo</label>
+      <input type="text" id="correo" name="correo">
+    </div>
+
+    <div class="campo">
+      <label for="fechaPagoNomina">Fecha de pago</label>
+      <input type="date" id="fechaPagoNomina" name="fechaPagoNomina">
+    </div>
+
+    <div class="campo">
+      <label for="periodoTrabajado">Período trabajado</label>
+      <input type="text" id="periodoTrabajado" name="periodoTrabajado">
+    </div>
+
+    <div class="campo">
+      <label for="sueldoBase">Sueldo base</label>
+      <input type="text" id="sueldoBase" name="sueldoBase">
+    </div>
+
+    <div class="campo">
+      <label for="incentivos">Incentivos</label>
+      <input type="text" id="incentivos" name="incentivos">
+    </div>
+
+    <div class="campo">
+      <label for="deducciones">Deducciones</label>
+      <input type="text" id="deducciones" name="deducciones">
+    </div>
+
+    <div class="campo">
+      <label for="subsidios">Subsidios</label>
+      <input type="text" id="subsidios" name="subsidios">
+    </div>
+
+    <div class="campo">
+      <label for="horasExtra">Horas extra</label>
+      <input type="text" id="horasExtra" name="horasExtra">
+    </div>
+
+    <div class="campo">
+      <label for="netoPagado">Neto pagado</label>
+      <input type="text" id="netoPagado" name="netoPagado">
+    </div>
+
+    <!-- Botones -->
+    <div class="acciones">
+      <button type="submit" class="registrar">Guardar cambios</button>
+      <button type="button"  class="cancelar" onclick="window.location.href='mostrarEgresos.html'">Cancelar</button>
+    </div>
+
+  </form>
+</body>
+</html>

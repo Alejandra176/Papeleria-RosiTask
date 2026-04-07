@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Registrar Promoción</title>
+<link rel="stylesheet" href="estilo-registrarProducto.css" />
+
+<!-- Axios -->
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+<!-- SweetAlert2 -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</head>
+<body>
+	<header class="header-registrar">
+		<h1>Registrar Promoción</h1>
+	</header>
+	<main>
+		<form id="formRegistrarPromocion" class="formulario">
+			<div class="campo">
+				<label for="nombrePromo">Nombre promoción</label> <input type="text"
+					id="nombrePromo" required />
+			</div>
+			<div class="campo">
+				<label for="descripcionPromo">Descripción</label> <input type="text"
+					id="descripcionPromo" required />
+			</div>
+			<div class="campo">
+				<label for="tipoPromo">Tipo de promoción</label> <select
+					id="tipoPromo">
+					<option selected>4 x 3</option>
+					<option>2 x 1</option>
+				</select>
+			</div>
+			<div class="campo">
+				<label for="fechaInicio">Fecha inicio</label> <input type="date"
+					id="fechaInicio" required />
+			</div>
+			<div class="campo">
+				<label for="fechaFin">Fecha fin</label> <input type="date"
+					id="fechaFin" required />
+			</div>
+			<div class="campo">
+				<label for="estadoPromo">Estado</label> <select id="estadoPromo">
+					<option selected>Activo</option>
+					<option>Inactivo</option>
+				</select>
+			</div>
+			<div class="campo">
+				<label for="idProductoFull">ID Producto pago full</label> <input
+					type="text" id="idProductoFull" required />
+			</div>
+			<div class="campo">
+				<label for="idProductoBeneficio">ID Producto beneficio</label> <input
+					type="text" id="idProductoBeneficio" required />
+			</div>
+			<div class="acciones">
+				<button type="submit" class="registrar">Registrar</button>
+				<button type="button" class="cancelar"
+					onclick="window.location.href='mostrarPromociones.html'">Cancelar</button>
+			</div>
+		</form>
+	</main>
+	<script src="registrarPromocion.js"></script>
+</body>
+</html>

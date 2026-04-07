@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Editar Descuento</title>
+  <link rel="stylesheet" href="estilo-registrarProducto.css" />
+  
+    <!-- SweetAlert2 -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  
+</head>
+<body>
+  <header class="header-editar">
+    <h1>Editar Descuento</h1>
+  </header>
+  <main> 
+  <form class="formulario" id="formEditar">
+  
+      <div class="campo">
+            <label>ID Descuento</label> <span id="idDescuentoTexto"></span>
+             <input type="hidden" id="idDescuento" disable />
+          </div>
+          
+          <div class="campo">
+            <label for="nombreDescu">Nombre descuento</label>
+            <input type="text" id="nombreDescu" />
+          </div>
+          
+          <div class="campo">
+            <label for="descripcionDescu">Descripción</label>
+            <input type="text" id="descripcionDescu" />
+          </div>
+          
+          <div class="campo">
+            <label for="tipoDescu">Tipo de Descuento</label>
+            <select id="tipoDescu">
+            <option value="30%">30%</option>
+          <option value="50%">50%</option>
+            </select>
+          </div>
+          
+          <div class="campo">
+            <label for="fechaInicio">Fecha inicio</label>
+            <input type="date" id="fechaInicio"  />
+          </div>
+  
+          <div class="campo">
+            <label for="fechaFin">Fecha fin</label>
+            <input type="date" id="fechaFin"  />
+          </div>
+          
+          <div class="campo">
+            <label for="estadoDescu">Estado</label>
+            <select id="estadoDescu">
+          <option value="Activo">Activo</option>
+          <option value="Inactivo">Inactivo</option>
+        </select>
+          </div>
+          
+          <div class="campo">
+          <label>ID Producto</label> <span id="idProductoTexto"></span>
+             <input type="hidden" id="idProducto" />
+          </div>
+          
+      <div class="acciones">
+        <button type="submit" class="registrar">Guardar cambios</button>
+        <button type="button" class="cancelar" onclick="window.location.href='mostrarDescuentos.html'">Cancelar</button>
+      </div>
+    </form>
+  </main>
+  
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="editarDescuento.js"></script>
+</body>
+</html>

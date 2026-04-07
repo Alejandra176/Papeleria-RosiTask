@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es" lang="es">
+<head>
+  <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Registrar Egreso</title>
+  <link rel="stylesheet" href="estilo-registrarPagoNomina.css">
+</head>
+<body>
+  <header class="header-registrar">
+    <h1> Pago Nómina</h1>
+  </header>
+
+  <main>
+    <div class="formulario">
+
+      <div class="campo">
+        <label for="empleado">Empleado</label>
+        <select id="empleado">
+          <option>Gladys</option>
+          <option>Otro Empleado</option>
+        </select>
+      </div>
+
+      <div class="campo">
+				<label for="cargo">Cargo</label> <select id="cargo" required>
+					<option value="" disabled selected>Seleccione</option>
+					<option value="Administrador">Administrador</option>
+					<option value="Asistente">Asistente</option>
+				</select>
+			</div>
+
+      <div class="campo">
+        <label for="correo">Correo</label>
+        <input type="email" id="correo" placeholder="correo@ejemplo.com">
+      </div>
+
+      <div class="campo">
+        <label for="periodoTrabajado">Periodo Trabajado</label>
+        <input type="text" id="periodoTrabajado" placeholder="Ej: Marzo 2025">
+      </div>
+
+      <div class="campo">
+        <label for="sueldoBase">Sueldo Base</label>
+        <input type="number" id="sueldoBase" step="0.01" placeholder="Ej: 1000000">
+      </div>
+
+      <div class="campo">
+        <label for="deducciones">Deducciones</label>
+        <input type="number" id="deducciones" step="0.01" placeholder="Ej: 50000">
+      </div>
+
+      <div class="campo">
+        <label for="subsidios">Subsidios</label>
+        <input type="number" id="subsidios" step="0.01" placeholder="Ej: 30000">
+      </div>
+
+      <div class="campo">
+        <label for="horasExtra">Horas Extra</label>
+        <input type="number" id="horasExtra" step="0.01" placeholder="Ej: 2">
+      </div>
+
+      <div class="campo">
+        <label for="netoPagado">Neto Pagado</label>
+        <input type="number" id="netoPagado" step="0.01" placeholder="Ej: 1150000">
+      </div>
+
+      <div class="acciones">
+        <button type="submit" class="registrar">Registrar</button>
+        <button type="button"  class="cancelar" onclick="window.location.href='registrarEgreso.html'">Cancelar</button>
+        <button type="button" class="comprobante" onclick="alert('Comprobante generado')">Comprobante</button>
+      </div>
+
+    </div>
+  </main>
+</body>
+</html>

@@ -1,0 +1,109 @@
+/* Fuente general y centrado */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0px;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+/* Título principal */
+.header-registrar h1 {
+  color: #330066;
+  margin-bottom: 20px;
+}
+
+/* Contenedor del formulario */
+.formulario {
+  background-color: #f9f9f9;
+  padding: 25px 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  max-width: 680px; /* ← Ancho ajustado aquí */
+  box-sizing: border-box;
+}
+
+.header-id {
+  font-weight: bold;
+  font-size: 1.1em;
+  margin-bottom: 15px;
+  color: #330066;
+}
+
+/* Campos del formulario */
+.campo {
+  margin-bottom: 18px;
+  display: flex;
+  flex-direction: column;
+}
+
+.campo label {
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 6px;
+  font-size: 1em;
+}
+
+.campo input[type="text"],
+.campo input[type="date"],
+.campo select {
+  width: 100%;
+  padding: 9px;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  color: #2c035b;
+  box-sizing: border-box;
+}
+
+/* Botones */
+.acciones {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 25px;
+}
+
+.acciones button {
+  font-size: 1rem;
+  padding: 10px 20px;
+  border: 2px solid #330066;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  min-width: 120px;
+  transition: all 0.2s ease;
+}
+
+/* Estilo individual de los botones */
+button.registrar {
+  background-color: #d7f2f2;
+  color: #330066;
+}
+
+button.cancelar {
+  background-color: #fcd0e2;
+  color: #330066;
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+  .formulario {
+    padding: 20px;
+    width: 100%;
+  }
+
+  .acciones {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .acciones button {
+    width: 100%;
+  }
+}

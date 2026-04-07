@@ -1,0 +1,170 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+ body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f2f0f7;
+  }
+  
+  .header {
+    background-color: #7d65a9;
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .logo img {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .logo h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+  }
+  
+ .acciones-header i {
+    font-size: 1.5rem;
+    color: yellow;
+    margin-left: 1rem;
+    cursor: pointer;
+  }
+  
+  .main {
+    padding: 2rem;
+  }
+  
+  .box {
+    background-color: #f9f0fb;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+  }
+  
+  .box h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    background-color: #d6c8cb;
+    padding: 0.5rem 1rem;
+    color: #3b1156;
+  }
+  
+  .btn-registrar {
+    background-color: #d4f8cc;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    margin: 1rem 0;
+    transition: background-color 0.3s;
+  }
+  
+  .btn-registrar:hover {
+    background-color: #b8e6ac;
+  }
+  
+  .barra-busqueda {
+    display: flex;
+    align-items: center;
+    border: 2px solid #3b1156;
+    border-radius: 10px;
+    padding: 0.4rem 1rem;
+    max-width: 300px;
+    margin-left: auto;
+    margin-bottom: 1rem;
+    background-color: white;
+  }
+  
+  .barra-busqueda i {
+    font-size: 1.2rem;
+    margin-right: 0.5rem;
+    color: #3b1156;
+  }
+  
+  .barra-busqueda input {
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 1rem;
+  }
+  
+  .tabla-empleados {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+  }
+  
+  .tabla-empleados thead th {
+    background-color: #eaeaea;
+    padding: 0.8rem;
+    text-align: left;
+    color: #3b1156;
+  }
+  
+  .tabla-empleados tbody td {
+     padding: 0.8rem;
+    background-color: #ffffff;
+  }
+  
+  .acciones {
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  .btn-editar {
+    background-color: #fde6bc;
+    border: none;
+    padding: 0.4rem 0.8rem;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  .btn-detalles {
+      background-color: #d6f6f8;
+    border: none;
+    padding: 0.4rem 0.8rem;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  
+  .btn-eliminar {
+     background-color: #f7b7b7;
+    border: none;
+    padding: 0.4rem 0.8rem;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  
+  .exportar {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+  }
+  
+  .btn-pdf {
+    background-color: #f3b3f9;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 12px;
+    cursor: pointer;
+  }
+  
+  .btn-excel {
+    background-color: #f86ec2;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 12px;
+    cursor: pointer;
+  }
+  

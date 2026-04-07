@@ -1,0 +1,130 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: white;
+}
+
+.header-registrar {
+  background-color: #d4f8ce;
+  padding: 1rem 2rem;
+  color: #2c035b;
+}
+
+.header-registrar h1 {
+  margin: 0;
+  color: #330066;
+  font-size: 2rem;
+}
+
+main {
+  padding: 2rem;
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  max-width: 1000px;
+  margin: auto;
+  gap: 1.5rem;
+}
+
+.fila-campos {
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+}
+
+.columna {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.campo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.campo label {
+  flex: 1;
+  font-weight: bold;
+  color: #000;
+}
+
+.campo input,
+.campo select,
+.campo textarea,
+.campo span {
+  flex: 2;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  color: #330066;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.campo textarea {
+  resize: vertical;
+  min-height: 120px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.campo span {
+  border: none;
+  background-color: transparent;
+}
+
+.campo input::placeholder,
+.campo textarea::placeholder {
+  color: #999;
+  font-style: italic;
+}
+
+select {
+  background-color: #fff;
+}
+
+.acciones {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.acciones button,
+.acciones a {
+  font-size: 1rem;
+  padding: 0.7rem 1.5rem;
+  border: 2px solid #330066;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.registrar {
+  background-color: #d9f5c7;
+  color: #330066;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.cancelar {
+  background-color: #fcd0e2;
+  color: #330066;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.registrar:hover {
+  background-color: #bde6a7;
+  transform: scale(1.05);
+}
+
+.cancelar:hover {
+  background-color: #f6abc6;
+  transform: scale(1.05);
+}

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Editar Empleado</title>
+<link rel="stylesheet" href="estilo-registrarEmpleado.css" />
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+	<header class="header-editar">
+		<h1>editar Empleado</h1>
+	</header>
+	<main>
+		<form class="formulario" id="formEditar">
+
+
+			<div class="campo">
+				<label for="idEmpleado">ID del Empleado</label> <input type="text"
+					id="idEmpleado" disabled />
+			</div>
+
+			<div class="campo">
+				<label for="nombre">Nombre del Empleado</label> <input type="text"
+					id="nombreEmpleado" placeholder="Ej: María José" required
+					pattern="^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+$"
+					title="El nombre no puede contener números ni caracteres especiales">
+			</div>
+
+			<div class="campo">
+				<label for="apellido">Apellido del Empleado</label> <input
+					type="text" id="apellidoEmpleado" placeholder="Ej: González López"
+					required pattern="^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+$"
+					title="El apellido no puede contener números ni caracteres especiales">
+			</div>
+
+			<div class="campo">
+				<label for="tipoDocumento">Tipo de Documento</label> <select
+					id="tipoDocumento" name="tipoDocumento" disabled>
+					<option value="" disabled selected>Seleccione un tipo</option>
+					<option value="CC">Cédula de ciudadanía</option>
+					<option value="CE">Cédula de extranjería</option>
+					<option value="PA">Pasaporte</option>
+				</select>
+			</div>
+
+
+			<div class="campo">
+				<label for="numeroDocumento">Número de Documento</label> <input
+					type="text" id="numeroDocumento" disabled>
+			</div>
+
+			<div class="campo">
+				<label for="fechaNacimiento">Fecha de Nacimiento</label> <input
+					type="date" id="fechaNacimiento" readonly>
+			</div>
+
+			<div class="campo">
+				<label for="direccion">Dirección Completa</label> <input type="text"
+					id="direccion" required>
+			</div>
+
+			<div class="campo">
+				<label for="telefono">Teléfono</label> <input type="text"
+					id="telefono" placeholder="3112341234" required pattern="\d{10,}"
+					minlength="10" title="El número debe tener al menos 10 dígitos">
+			</div>
+
+			<div class="campo">
+				<label for="correo">Correo Electrónico</label> <input type="email"
+					id="correo" placeholder="ejemplo@empresa.com" required>
+			</div>
+
+			<div class="campo">
+				<label for="cargo">Cargo</label> <select id="cargo" required>
+					<option value="" disabled selected>Seleccione</option>
+					<option value="Administrador">Administrador</option>
+					<option value="Asistente">Asistente</option>
+				</select>
+			</div>
+
+			<div class="campo">
+				<label for="salario">Salario </label> <input type="number"
+					id="salario" placeholder="$" min="0" required>
+			</div>
+
+			<div class="campo">
+				<label for="fechaIngreso">Fecha de Ingreso</label> <input
+					type="date" id="fechaIngreso" readonly>
+			</div>
+
+
+			<div class="campo">
+				<label for="estado">Estado</label> <select id="estado" required>
+					<option value="" disabled selected>Seleccione</option>
+					<option value="activo">Activo</option>
+					<option value="inactivo">Inactivo</option>
+					<option value="prueba">Periodo de prueba</option>
+					<option value="vacaciones">En vacaciones</option>
+					<option value="licencia">Licencia médica</option>
+				</select>
+			</div>
+
+
+			<div class="acciones">
+				<button type="submit" class="registrar">Guardar cambios</button>
+				<button type="button" class="cancelar"
+					onclick="window.location.href='mostrarNomina.html'">Cancelar</button>
+
+			</div>
+		</form>
+	</main>
+	<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+	<script src="editarEmpleado.js"></script>
+</body>
+</html>

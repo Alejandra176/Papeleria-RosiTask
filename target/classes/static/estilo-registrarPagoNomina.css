@@ -1,0 +1,123 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-registrar {
+
+    color: #330066;
+  margin-bottom: 20px;
+    position: absolute;
+    top: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+.formulario {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 450px;
+    margin-top: 60px; /* espacio para el header */
+}
+
+.header-id {
+    font-weight: bold;
+    font-size: 1.1em;
+    margin-bottom: 15px;
+    color: #330066;
+}
+
+.campo {
+    margin-bottom: 15px;
+}
+
+.campo label {
+    display: block;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 5px;
+    font-size: 1em;
+}
+
+.campo input[type="text"],
+.campo input[type="date"],
+.campo input[type="number"],
+.campo input[type="email"],
+.campo select {
+    width: 100%;
+    padding: 8px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    color: #2c035b;
+    box-sizing: border-box;
+}
+
+.campo input[readonly] {
+    background-color: #eee;
+}
+
+.acciones {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.acciones button {
+    font-size: 1rem;
+    padding: 10px 20px;
+    border: 2px solid #330066;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    min-width: 120px;
+}
+
+button.registrar {
+    background-color: #d7f2f2;
+    color: #330066;
+}
+
+button.cancelar {
+    background-color: #fcd0e2;
+    color: #330066;
+}
+
+button.comprobante {
+    background-color: #a3e4a3;
+    color: #330066;
+    border-color: #330066;
+}
+/* Responsive */
+@media (max-width: 500px) {
+  .formulario {
+    padding: 20px;
+    width: 100%;
+  }
+
+  .acciones {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .acciones button {
+    width: 100%;
+  }
+}

@@ -1,0 +1,79 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  
+  .modal {
+    width: 600px;
+    background-color: white;
+    border: 3px solid #e8a5a5;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .modal-header {
+    background-color: #e8a5a5;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid #e8a5a5;
+  }
+  
+  .modal-header h2 {
+    margin: 0;
+    color: #2d004d;
+    font-size: 28px;
+  }
+  
+  .modal-body {
+    padding: 40px 30px;
+    text-align: center;
+  }
+  
+  .pregunta {
+    font-size: 26px;
+    color: #2d004d;
+    margin-bottom: 30px;
+  }
+  
+  .nombre {
+    font-size: 22px;
+    color: #2d004d;
+    margin-bottom: 40px;
+  }
+  
+  .botones {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+  }
+  
+  .cancelar, .eliminar {
+    padding: 15px 30px;
+    border: 2px solid #2d004d;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    min-width: 150px;
+    transition: transform 0.2s ease;
+  }
+  
+  .cancelar {
+    background-color: #e0b4f1;
+    color: #2d004d;
+  }
+  
+  .eliminar {
+    background-color: #d4f9d4;
+    color: #2d004d;
+  }
+  
+  .cancelar:hover, .eliminar:hover {
+    transform: scale(1.05);
+  }
+  

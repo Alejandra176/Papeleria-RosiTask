@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Registrar Pedido</title>
+<link rel="stylesheet" href="estilo-registrarProducto.css" />
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+	<header class="header-registrar">
+		<h1>Registrar Pedido</h1>
+	</header>
+	<main class="registrar-pedido">
+		<form id="formRegistrarPedido" class="formulario">
+			<div class="fila-campos">
+				<div class="columna">
+					<div class="campo">
+						<label for="fechaPedido">Fecha de Pedido:</label> <input
+							type="date" id="fechaPedido" readonly />
+					</div>
+					<div class="campo">
+						<label for="estado">Estado:</label> <select id="estado">
+							<option>Pendiente</option>
+							<option>Entregado</option>
+							<option>Cancelado</option>
+						</select>
+					</div>
+					<div class="campo">
+						<label for="formaPago">Forma de Pago:</label> <select
+							id="formaPago">
+							<option>Efectivo</option>
+							<option>Transferencia</option>
+							<option>Tarjeta</option>
+						</select>
+					</div>
+					<div class="campo">
+						<label for="total">Total:</label> <input type="text" id="total"
+							placeholder="$" required />
+					</div>
+				</div>
+
+				<div class="columna">
+					<div class="campo">
+						<label for="fechaEntrega">Fecha de Entrega:</label> <input
+							type="date" id="fechaEntrega" placeholder="dd-mm-aaaa" required />
+					</div>
+					<div class="campo">
+						<label for="proveedor">Proveedor:</label> <select id="proveedor"
+							name="proveedor">
+							<option>Jacobo</option>
+							<option>María</option>
+							<option>Otros</option>
+						</select>
+					</div>
+					<div class="campo">
+						<label for="observaciones">Observaciones:</label>
+						<textarea id="observaciones" placeholder="Como llego el pedido solicitado ..."]></textarea>
+					</div>
+
+				</div>
+			</div>
+
+			<div class="acciones">
+				<button type="submit" class="registrar">Registrar</button>
+				<button type="button" class="cancelar"
+					onclick="window.location.href='mostrarPedidos.html'">Cancelar</button>
+			</div>
+		</form>
+	</main>
+	<script src="registrarPedido.js"></script>
+</body>
+</html>

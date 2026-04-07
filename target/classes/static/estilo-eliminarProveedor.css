@@ -1,0 +1,80 @@
+body {
+      font-family: Arial, sans-serif;
+      background-color: rgba(0, 0, 0, 0.2);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .modal {
+      background-color: white;
+      border: 3px solid #f29ca9;
+      border-radius: 12px;
+      width: 400px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      overflow: hidden;
+    }
+
+    .modal-header {
+      background-color: #f2a1a1;
+      color: #2d0145;
+      font-weight: bold;
+      font-size: 20px;
+      padding: 15px;
+    }
+
+    .modal-body {
+      padding: 30px 20px;
+      text-align: center;
+      color: #2d0145;
+      font-size: 18px;
+    }
+
+    .modal-body p {
+      margin: 20px 0;
+    }
+
+    .modal-footer {
+      display: flex;
+      justify-content: space-evenly;
+      padding: 20px;
+    }
+
+    .btn {
+      padding: 10px 25px;
+      font-size: 16px;
+      border-radius: 8px;
+      font-weight: bold;
+      border: 2px solid #2d0145;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.2s;
+    }
+
+    .cancel-btn {
+      background-color: #e7b1f7;
+      color: #2d0145;
+    }
+
+    .cancel-btn:hover {
+      background-color: #d493ef;
+      transform: scale(1.05);
+    }
+
+    .delete-btn {
+      background-color: #c9fcd1;
+      color: #2d0145;
+    }
+
+    .delete-btn:hover {
+      background-color: #a8e7b5;
+      transform: scale(1.05);
+    }
+
+    .acciones a {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+  font-weight: 600;
+}

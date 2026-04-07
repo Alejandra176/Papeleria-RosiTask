@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Selección de Módulos</title>
+<link rel="stylesheet"
+	href="https://unpkg.com/primeicons/primeicons.css">
+
+<link
+	href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+	rel="stylesheet">
+
+<link rel="stylesheet" href="estilo-selecModulos.css">
+</head>
+<body>
+	<header class="header-modulo">
+		<div class="logo-modulo">
+			<!-- Puedes dejar esto vacío o poner un logo si quieres -->
+		</div>
+
+		<h1 class="titulo-modulo">Seleccione el módulo de su interés</h1>
+
+		<div class="header-actions">
+			<button class="notification-btn">
+				<i class="pi pi-bell"></i> <span class="notification-badge">3</span>
+			</button>
+			<button class="profile-btn"
+				onclick="window.location.href='mostrarUsuario.html'">
+				<i class="pi pi-user profile-img"></i>
+			</button>
+		</div>
+	</header>
+
+
+	<div class="contenedor">
+		<div class="grid-modulos">
+			<!-- Columna 1 -->
+			<div class="columna-modulos">
+				<a href="mostrarProductos.html" class="modulo"> <i
+					class="pi pi-box"></i><span>Productos</span>
+				</a> <a href="mostrarNomina.html" class="modulo"> <i
+					class="pi pi-box"></i><span>Nomina</span>
+				</a> <a href="mostrarPromociones.html" class="modulo"> <i
+					class="pi pi-tags"></i><span>Promociones</span>
+				</a>
+			</div>
+
+			<!-- Columna 2 -->
+			<div class="columna-modulos">
+				<a href="mostrarVentas.html" class="modulo"> <i
+					class="pi pi-shopping-cart"></i><span>Ventas</span>
+				</a> <a href="mostrarProveedores.html" class="modulo"> <i
+					class="pi pi-truck"></i><span>Proveedores</span>
+				</a> <a href="mostrarDescuentos.html" class="modulo"> <i
+					class="pi pi-percentage"></i><span>Descuentos</span>
+				</a>
+			</div>
+
+			<!-- Columna 3 -->
+			<div class="columna-modulos">
+				<a href="mostrarPedidos.html" class="modulo"> <i
+					class="pi pi-send"></i><span>Pedidos</span>
+				</a> <a href="mostrarEgresos.html" class="modulo"> <i
+					class="pi pi-money-bill"></i><span>Egresos</span>
+				</a> <a href="mostrarCaja.html" class="modulo"> <i
+					class="pi pi-wallet"></i><span>Caja</span>
+				</a>
+			</div>
+
+			<!-- Columna 4 -->
+			<div class="columna-modulos">
+				<a href="mostrarUsuarios.html" class="modulo"> <i
+					class="pi pi-users"></i> <span>Usuarios</span>
+				</a>
+			</div>
+
+
+		</div>
+	</div>
+</body>
+</html>

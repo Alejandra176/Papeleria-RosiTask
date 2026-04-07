@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Módulo Producto</title>
+
+<link
+	href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+	rel="stylesheet" />
+<link rel="stylesheet"
+	href="https://unpkg.com/primeicons@6.0.0/primeicons.css" />
+<link rel="stylesheet" href="estilo-mostrarProductos.css" />
+</head>
+<body>
+	<header class="header">
+		<div class="logo">
+			<img src="https://cdn-icons-png.flaticon.com/512/5311/5311136.png"
+				alt="icono" />
+			<h1>Módulo Producto</h1>
+		</div>
+		<div class="acciones-header">
+			<i class="pi pi-bell" title="Notificaciones"></i> <i
+				class="pi pi-times-circle" title="Cerrar"
+				onclick="window.location.href='seleccionModulo.html'"></i>
+		</div>
+	</header>
+
+	<main class="main">
+		<section class="box">
+			<h2>Lista de productos</h2>
+
+
+			<button class="btn-registrar"
+				onclick="window.location.href='registrarProducto.html'">Registrar
+				producto</button>
+
+
+			<div class="barra-busqueda">
+				<i class="pi pi-search"></i> <input type="text"
+					placeholder="Buscar por ID" id="buscar-id" />
+				<!--<button id="btn-buscar">Buscar</button>-->
+			</div>
+
+
+			<table class="tabla-productos">
+				<thead>
+					<tr>
+						<th>ID</th>
+						<th>Nombre</th>
+						<th>Marca</th>
+						<th>PrecioVenta</th>
+						<th>Estado</th>
+						<th>Acciones</th>
+					</tr>
+				</thead>
+				<tbody id="tbody-productos">
+					<!-- Aquí se insertarán dinámicamente los productos -->
+				</tbody>
+			</table>
+
+			<div class="pagination"></div>
+
+			
+		</section>
+	
+	
+
+</main>
+	<!-- MODAL ELIMINAR PRODUCTO -->
+<div class="modal" id="modalEliminar" style="display: none;">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h2>Eliminar Producto</h2>
+    </div>
+    <div class="modal-body">
+      <p class="pregunta"><strong>¿Seguro que desea eliminar este producto?</strong></p>
+      <p class="nombre">ID del producto: <strong id="idProductoEliminar"></strong></p>
+      <div class="botones">
+        <button class="cancelar" onclick="cerrarModalEliminar()">Cancelar</button>
+        <button class="eliminar">Eliminar</button>
+            </div>
+    </div>
+  </div>
+</div>
+	 <!-- abrir y cerrar Eliminar -->
+<script>
+function abrirModalEliminar(id) {
+    const modal = document.getElementById('modalEliminar');
+    modal.style.display = 'flex';
+    setTimeout(() => modal.classList.add('show'), 10);
+    document.getElementById('idProductoEliminar').textContent = id;
+}
+
+function cerrarModalEliminar() {
+    const modal = document.getElementById('modalEliminar');
+    modal.classList.remove('show');
+    setTimeout(() => {
+        modal.style.display = 'none';
+    }, 300);
+}
+</script>
+	 
+
+
+
+	<!-- Axios CDN -->
+	<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+	<!-- script para mostrar los productos -->
+	<script src="mostrarProductos.js"></script>
+	<!--<script src="eliminarProducto.js"></script>-->
+
+</body>
+</html>

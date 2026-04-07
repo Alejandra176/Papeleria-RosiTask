@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Registrar Egreso</title>
+  <link rel="stylesheet" href="estilo-registrarEgreso.css" />
+  <!-- Axios CDN -->
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <style>
+    .seccion-extra {
+      display: none;
+      margin-top: 20px;
+      border-top: 1px solid #ccc;
+      padding-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <header class="header-registrar">
+    <h1>Registrar Egreso</h1>
+  </header>
+
+  <main>
+    <div class="formulario">
+      <div class="campo">
+  		<label>ID del Egreso</label>
+  		<span id="idEgreso" >Cargando...</span>
+		</div>
+
+      <div class="campo">
+				<label for="fechaEgreso">Fecha del Egreso</label> 
+                <input type="date" id="fechaEgreso" required>
+			</div>
+
+      <div class="campo">
+        <label for="valorEgreso">Valor</label>
+        <input type="text" id="valorEgreso" placeholder="Ej. $150.000">
+      </div>
+
+      <div class="campo">
+        <label for="categoria">Categoría</label>
+        <select id="categoria" onchange="mostrarSeccion()">
+          <option value=""> Selecciona </option>
+          <option value="local">Pago Local</option>
+          <option value="nomina">Pago Nómina</option>
+        </select>
+      </div>
+
+      <div class="campo">
+        <label for="metodoPago">Método de Pago</label>
+        <select id="metodoPago">
+          <option value="">Selecciona</option>
+          <option value="efectivo">Efectivo</option>
+          <option value="transferencia">Otro</option>
+        </select>
+      </div>
+
+      <!-- Sección de Pago Local -->
+      <div id="seccionLocal" class="seccion-extra">
+        <h2>Pago del Local</h2>
+
+        <div class="campo">
+          <label for="concepto">Concepto</label>
+          <input type="text" id="concepto" placeholder="Descripción del gasto" />
+        </div>
+
+        <div class="campo">
+          <label for="estadoPago">Estado del Pago</label>
+          <select id="estadoPago">
+            <option>Pagado</option>
+            <option>Pendiente</option>
+            <option>Rechazado</option>
+          </select>
+        </div>
+
+        <div class="campo">
+          <label for="numeroFactura">Número de Factura</label>
+          <input type="text" id="numeroFactura" value="203" />
+        </div>
+
+        <div class="campo">
+          <label for="periodo">Periodo</label>
+          <input type="text" id="periodo" value="Marzo 2025" />
+        </div>
+      </div>
+
+      <!-- Sección de Pago Nómina -->
+      <div id="seccionNomina" class="seccion-extra">
+        <h2>Pago Nómina</h2>
+
+        <div class="campo">
+          <label for="empleado">Empleado</label>
+          <select id="empleado">
+          </select>
+        </div>
+
+        <div class="campo">
+          <label for="cargo">Cargo</label>
+          <select id="cargo">
+            <option value="" disabled selected>Seleccione</option>
+            <option value="Administrador">Administrador</option>
+            <option value="Asistente">Asistente</option>
+          </select>
+        </div>
+
+        <div class="campo">
+          <label for="correo">Correo</label>
+          <input type="email" id="correo" placeholder="correo@ejemplo.com">
+        </div>
+
+        <div class="campo">
+          <label for="periodoTrabajado">Periodo Trabajado</label>
+          <input type="text" id="periodoTrabajado" placeholder="Ej: Marzo 2025">
+        </div>
+
+        <div class="campo">
+          <label for="sueldoBase">Sueldo Base</label>
+          <input type="number" id="sueldoBase" step="0.01" placeholder="Ej: 1000000">
+        </div>
+
+        <div class="campo">
+          <label for="deducciones">Deducciones</label>
+          <input type="number" id="deducciones" step="0.01" placeholder="Ej: 50000">
+        </div>
+
+        <div class="campo">
+          <label for="subsidios">Subsidios</label>
+          <input type="number" id="subsidios" step="0.01" placeholder="Ej: 30000">
+        </div>
+
+        <div class="campo">
+          <label for="horasExtra">Horas Extra</label>
+          <input type="number" id="horasExtra" step="0.01" placeholder="Ej: 2">
+        </div>
+
+        <div class="campo">
+          <label for="netoPagado">Neto Pagado</label>
+          <input type="number" id="netoPagado" step="0.01" placeholder="Ej: 1150000">
+        </div>
+      </div>
+
+      <div class="acciones">
+        <button type="submit" class="registrar">Registrar</button>
+        <button type="button" class="cancelar" onclick="window.location.href='mostrarEgresos.html'">Cancelar</button>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    function mostrarSeccion() {
+      const categoria = document.getElementById("categoria").value;
+      const seccionLocal = document.getElementById("seccionLocal");
+      const seccionNomina = document.getElementById("seccionNomina");
+
+      seccionLocal.style.display = categoria === "local" ? "block" : "none";
+      seccionNomina.style.display = categoria === "nomina" ? "block" : "none";
+    }
+  </script>
+  
+  <script src="registrarEgreso.js"></script>
+</body>
+</html>

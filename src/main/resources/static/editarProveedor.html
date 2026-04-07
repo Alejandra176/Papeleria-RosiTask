@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Editar Proveedor</title>
+<link rel="stylesheet" href="estilo-editarProveedor.css" />
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</head>
+<body>
+	<header class="header-editar">
+		<h1>Editar Proveedor</h1>
+	</header>
+	<main class="editar-proveedor">
+		<form class="formulario" id="formEditar">
+			<div class="fila-campos">
+				<div class="columna">
+
+
+					<div class="campo">
+						<label for="idProveedor">Id proveedor</label> <input type="text"
+							id="idProveedor" disabled />
+					</div>
+
+					<div class="campo">
+						<label for="nombreProveedor">Nombre proveedor</label> <input
+							type="text" id="nombreProveedor" />
+					</div>
+
+
+					<div class="campo">
+						<label for="tipoDocumento">Tipo Documento</label> <select
+							id="tipoDocumento" name="tipoDocumento" disabled>
+							<option selected value="Cédula">Cédula</option>
+							<option value="NIT">NIT</option>
+							<option value="Pasaporte">Pasaporte</option>
+						</select>
+					</div>
+
+
+					<div class="campo">
+						<label for="numeroDocumento">Número Documento</label> <input
+							type="text" id="numeroDocumento" disabled />
+					</div>
+
+					<div class="campo">
+						<label for="ciudad">Ciudad</label> <select id="ciudad"
+							name="ciudad" required>
+							<option disabled selected>Selecciona una ciudad</option>
+							<option value="Bogotá">Bogotá (Capital)</option>
+							<option value="Medellín">Medellín</option>
+							<option value="Cali">Cali</option>
+							<option value="Barranquilla">Barranquilla</option>
+							<option value="Cartagena">Cartagena</option>
+							<option value="Cúcuta">Cúcuta</option>
+							<option value="Santa Marta">Santa Marta</option>
+							<option value="Pereira">Pereira</option>
+							<option value="Manizales">Manizales</option>
+							<option value="Bucaramanga">Bucaramanga</option>
+							<option value="Villavicencio">Villavicencio</option>
+							<option value="Ibagué">Ibagué</option>
+							<option value="Pasto">Pasto</option>
+							<option value="Armenia">Armenia</option>
+							<option value="Neiva">Neiva</option>
+							<option value="Sincelejo">Sincelejo</option>
+							<option value="Popayán">Popayán</option>
+							<option value="Riohacha">Riohacha</option>
+							<option value="Montería">Montería</option>
+							<option value="Valledupar">Valledupar</option>
+						</select>
+					</div>
+
+
+
+					<div class="campo">
+						<label for="direccion">Dirección</label> <input type="text"
+							id="direccion" />
+					</div>
+				</div>
+
+				<div class="columna">
+					<div class="campo">
+						<label for="telefono">Teléfono</label> <input type="tel"
+							id="telefono" />
+					</div>
+					<div class="campo">
+						<label for="correo">Correo</label> <input type="email" id="correo" />
+					</div>
+					<div class="campo">
+						<label for="fechaRegistro">Fecha de Ingreso</label> <input
+							type="text" id="fechaRegistro" disabled />
+					</div>
+					<div class="campo">
+						<label for="observacion">Observaciones</label> <input type="text"
+							id="observacion" />
+					</div>
+				</div>
+			</div>
+			<div class="acciones">
+				<button type="submit" class="registrar">Guardar cambios</button>
+				<a href="mostrarProveedores.html" class="cancelar">Cancelar</a>
+			</div>
+		</form>
+	</main>
+
+	<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+	<script src="editarProveedor.js"></script>
+
+</body>
+</html>

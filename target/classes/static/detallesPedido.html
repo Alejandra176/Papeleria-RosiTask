@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Detalles del Pedido</title>
+    <link rel="stylesheet" href="estilo-registrarProducto.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <header class="header-detalles">
+        <h1>Detalles del Pedido</h1>
+    </header>
+
+    <main class="contenedor-detalles">
+        <div class="info-principal">
+            <table class="tabla-detalles">
+                <tr>
+                    <td class="etiqueta">ID del Pedido:</td>
+                    <td id="detalle-id"></td>
+                </tr>
+                <tr>
+                    <td class="etiqueta">Fecha de Pedido:</td>
+                    <td id="detalle-fecha-pedido"></td>
+                </tr>
+                <tr>
+                    <td class="etiqueta">Fecha de Entrega:</td>
+                    <td id="detalle-fecha-entrega"></td>
+                </tr>
+                <tr>
+                    <td class="etiqueta">Estado:</td>
+                    <td id="detalle-estado"></td>
+                </tr>
+                <tr>
+                    <td class="etiqueta">Proveedor:</td>
+                    <td id="detalle-proveedor"></td>
+                </tr>
+                <tr>
+                    <td class="etiqueta">Forma de Pago:</td>
+                    <td id="detalle-forma-pago"></td>
+                </tr>
+                <tr>
+                    <td class="etiqueta">Observaciones:</td>
+                    <td id="detalle-observaciones"></td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="boton-volver">
+            <p style="margin-bottom: 30px; font-weight: bold; font-size: 18px;">
+                Total: $<span id="detalle-total"></span>
+            </p>
+            <button class="btn-volver" onclick="window.location.href='mostrarPedidos.html'">Volver</button>
+        </div>
+    </main>
+
+    <script src="detallesPedido.js"></script>
+</body>
+</html>

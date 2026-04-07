@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Registrar Descuento</title>
+  <link rel="stylesheet" href="estilo-registrarProducto.css" />
+  
+  <!-- Axios -->
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  
+  <!-- SweetAlert2 -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  
+</head>
+<body>
+  <header class="header-registrar">
+    <h1>Registrar Descuento</h1>
+  </header>
+  <main>
+  <form id="formRegistrarDescuento" class="formulario">
+    <div class="campo">
+        <label for="nombre">Nombre del descuento</label>
+        <input type="text" id="nombreDescu" required/>
+      </div>
+          <div class="campo">
+            <label for="descripcionDescu">Descripción</label>
+            <input type="text" id="descripcionDescu" required/>
+          </div>
+          <div class="campo">
+            <label for="tipoDescu">Tipo de Descuento</label>
+            <select id="tipoDescu">
+              <option selected>30%</option>
+              <option>50%</option>
+            </select>
+          </div>
+          <div class="campo">
+            <label for="fechaInicio">Fecha inicio</label>
+            <input type="date" id="fechaInicio" required/>
+          </div>
+          <div class="campo">
+            <label for="fechaFin">Fecha fin</label>
+            <input type="date" id="fechaFin" required/>
+          </div>
+          <div class="campo">
+            <label for="estadoDescu">Estado</label>
+            <select id="estadoDescu">
+          <option selected>Activo</option>
+          <option>Inactivo</option>
+        </select>
+      </div>
+          <div class="campo">
+            <label for="idProducto">ID Producto</label>
+             <select id="idProducto">
+              <option selected>1</option>
+              <option>2</option>
+              <option>3</option>
+            </select>
+          </div>
+      <div class="acciones">
+        <button type="submit" class="registrar">Registrar</button>
+        <button type="button" class="cancelar" onclick="window.location.href='mostrarDescuentos.html'">Cancelar</button>
+      </div>
+    </form>
+  </main>
+  <script src="registrarDescuentos.js"></script>
+</body>
+</html>

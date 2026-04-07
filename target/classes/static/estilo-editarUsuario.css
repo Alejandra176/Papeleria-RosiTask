@@ -1,0 +1,93 @@
+  /* Estilos específicos para el formulario de edición */
+        .edit-container {
+            max-width: 600px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(106, 33, 168, 0.1);
+        }
+
+        .edit-header {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #5d3a9e;
+        }
+
+        .edit-header h2 {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: #5d3a9e;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+
+        .form-control:focus {
+            border-color: #7d65a9;
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(125, 101, 169, 0.2);
+        }
+
+        .form-actions {
+            display: flex;
+            justify-content: flex-end;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .btn {
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 5px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .btn-primary {
+            background-color: #7d65a9;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: #5d3a9e;
+        }
+
+        .btn-secondary {
+            background-color: #f0e9ff;
+            color: #7d65a9;
+        }
+
+        .btn-secondary:hover {
+            background-color: #e0d0ff;
+        }
+
+        .password-toggle {
+            position: relative;
+        }
+
+        .password-toggle .toggle-icon {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            color: #7d65a9;
+        }

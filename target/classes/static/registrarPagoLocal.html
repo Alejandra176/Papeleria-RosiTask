@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Registrar Pago Local</title>
+  <link rel="stylesheet" href="estilo-registrarPagoLocal.css" />
+</head>
+<body>
+  <header class="header-registrar">
+    <h1>Pago del Local</h1>
+  </header>
+
+  <main>
+    <div class="formulario">
+
+      <div class="campo">
+        <label for="concepto">Concepto</label>
+        <input type="text" id="concepto" placeholder="Descripción del gasto" />
+      </div>
+
+      <div class="campo">
+        <label for="estadoPago">Estado del Pago</label>
+        <select id="estadoPago">
+          <option>Pagado</option>
+          <option>Pendiente</option>
+          <option>Rechazado</option>
+        </select>
+      </div>
+
+      <div class="campo">
+        <label for="numeroFactura">Número de Factura</label>
+        <input type="text" id="numeroFactura" value="203" />
+      </div>
+
+      <div class="campo">
+        <label for="periodo">Periodo</label>
+        <input type="text" id="periodo" value="Marzo 2025" />
+      </div>
+    <div class="acciones">
+      <button type="submit" class="registrar">Registrar</button>
+       <button type="button"  class="cancelar" onclick="window.location.href='registrarEgreso.html'">Cancelar</button>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,500 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: white;
+  }
+  
+  header {
+    padding: 1rem 2rem;
+    color: #2c035b;
+  }
+
+  .header-registrar {
+    background-color: #d4f8ce; 
+    padding: 1rem 2rem;
+    color: #2c035b;
+  }
+  
+  .header-editar {
+    background-color: #fae4bd; 
+    padding: 1rem 2rem;
+    color: #2c035b;
+  }
+
+  header h1 {
+    margin: 0;
+    color: #330066;
+    font-size: 2rem;
+  }
+  
+  main {
+    padding: 2rem;
+  }
+  
+  .formulario {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: auto;
+  }
+  
+  .campo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.2rem;
+  }
+  
+  .campo label {
+    flex: 1;
+    font-weight: bold;
+    color: #000;
+  }
+  
+  .campo input,
+  .campo select,
+  .campo span {
+    flex: 2;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    color: #330066;
+  }
+  
+  .campo span {
+    border: none;
+  }
+  
+  select {
+    background-color: #fff;
+  }
+  
+.acciones {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.acciones button,
+.acciones a {
+  font-size: 1rem;
+  padding: 0.7rem 1.5rem;
+  border: 2px solid #330066;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.registrar {
+  background-color: #d9f5c7;
+  color: #330066;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.cancelar {
+  background-color: #fcd0e2;
+  color: #330066;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.registrar:hover {
+  background-color: #bde6a7;
+  transform: scale(1.05);
+}
+
+.cancelar:hover {
+  background-color: #f6abc6;
+  transform: scale(1.05);
+}
+  
+  /* CSS detallesProducto */
+  
+
+  .header-detalles {
+    background-color: #d7f2f2; /* Azul verdoso claro */
+    color: #2c035b;
+  }
+  
+  .contenido-detalles {
+    padding: 40px;
+    max-width: 1200px;
+    margin: auto;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 30px;
+
+  }
+  
+  .info-principal {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    font-size: 30px;
+    
+  }
+  
+  .info-principal p {
+    margin: 10px 0;
+    font-size: 20px;
+  }
+  
+  .tablas-detalles {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    gap: 20px;
+  }
+  
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 500px;
+    font-size: 16px;
+  }
+  
+  td {
+    border: 1px solid #ccc;
+    padding: 10px;
+  }
+  
+  .etiqueta {
+    color: #3b0a82;
+    font-weight: 600;
+  }
+  
+  .boton-volver {
+    text-align: center;
+  }
+  
+  .btn-volver {
+    background-color: #e3b5ff;
+    border: 2px solid #3b0a82;
+    color: #3b0a82;
+    padding: 12px 60px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    
+  }
+  
+  .btn-volver:hover {
+    background-color: #d6a3ff;
+  }
+
+  /* --- Estilos específicos para registrarPedido.html --- editar - detalles - eliminar*/
+.registrar-pedido .formulario {
+  max-width: 1000px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.registrar-pedido .fila-campos {
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+}
+
+.registrar-pedido .columna {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.registrar-pedido .campo.id-right {
+  text-align: right;
+  font-weight: bold;
+}
+
+.registrar-pedido .acciones {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.registrar-pedido .acciones button {
+  font-size: 1rem;
+  padding: 0.7rem 1.5rem;
+  border: 2px solid #330066;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.registrar-pedido .acciones .registrar {
+  background-color: #d9f5c7;
+  color: #330066;
+}
+
+.registrar-pedido .acciones .cancelar {
+  background-color: #fcd0e2;
+  color: #330066;
+}
+
+.registrar-pedido .campo textarea {
+  resize: vertical;
+  min-height: 120px; /* Aumenta el alto mínimo */
+  width: 68%;       /* Asegura que ocupe el ancho completo */
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  color: #330066;
+  font-family: 'Segoe UI', sans-serif;
+  box-sizing: border-box;
+}
+
+/* Estilo exclusivo para centrar el contenido de detallesPedido.html */
+.contenedor-detalles {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 80px;
+}
+
+.tabla-detalles {
+  border-collapse: collapse;
+  width: auto;
+  min-width: 400px;
+  margin-bottom: 40px;
+}
+
+.tabla-detalles td {
+  border: 1px solid #ccc;
+  padding: 10px 15px;
+}
+
+.tabla-detalles td.etiqueta {
+  font-weight: bold;
+  color: #4B0082;
+  text-align: right;
+  width: 150px;
+}
+
+.total-texto {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* css diseño registrar Promocion*/
+
+/* --- Estilos específicos para registrar_promocion.html --- */
+.registrar-promocion .formulario {
+  max-width: 1000px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.registrar-promocion .fila-campos {
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+}
+
+.registrar-promocion .columna {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.registrar-promocion .campo.id-right {
+  text-align: right;
+  font-weight: bold;
+}
+
+.registrar-promocion .campo input,
+.registrar-promocion .campo select,
+.registrar-promocion .campo span {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.registrar-promocion .campo select {
+  /* icono desplegable alineado a la derecha */
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D'10'%20height%3D'6'%20viewBox%3D'0%200%2010%206'%20xmlns%3D'http%3A//www.w3.org/2000/svg'%3E%3Cpath%20d%3D'M0%200l5%206%205-6z'%20fill%3D'%23330066'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 0.6rem;
+}
+
+.registrar-promocion .acciones button {
+  min-width: 140px;
+}
+
+
+/* --- Detalles de la Promoción (promocion-detalles) --- */
+.promocion-detalles {
+  padding: 40px;
+  background-color: white;
+  max-width: 1200px;
+  margin: auto;
+}
+.promocion-detalles header.header-detalles {
+  background-color: #d7f2f2; /* mismo verde-agua */
+}
+.promocion-detalles .info-detalles {
+  display: flex;
+  justify-content: space-between;
+  gap: 10rem;
+  margin: 40px 0;
+}
+.promocion-detalles .info-detalles .columna {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.promocion-detalles .info-detalles .columna p {
+  margin: 0;
+  font-size: 1.25rem;
+}
+.promocion-detalles .info-detalles .columna p strong {
+  font-weight: bold;
+  width: 225px;
+  display: inline-block;
+  color: #000;
+}
+.promocion-detalles .boton-volver {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+.promocion-detalles .btn-volver {
+  /* hereda color y padding, sólo ajustamos margen */
+  padding: 12px 80px;
+}
+
+
+/* CSS registrar Descuento*/
+
+.registrar-descuento .formulario {
+  max-width: 1000px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.registrar-descuento .fila-campos {
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+}
+
+.registrar-descuento .columna {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.registrar-descuento .campo.id-right {
+  text-align: right;
+  font-weight: bold;
+}
+
+.registrar-descuento .campo input,
+.registrar-descuento .campo select,
+.registrar-descuento .campo span {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.registrar-descuento .campo select {
+  /* icono desplegable alineado a la derecha */
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D'10'%20height%3D'6'%20viewBox%3D'0%200%2010%206'%20xmlns%3D'http%3A//www.w3.org/2000/svg'%3E%3Cpath%20d%3D'M0%200l5%206%205-6z'%20fill%3D'%23330066'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 0.6rem;
+}
+
+.registrar-descuento .acciones button {
+  min-width: 140px;
+}
+
+/* --- Vista: Detalles del Descuento --- */
+.header-detalles {
+  background-color: #d4f4f6;
+  padding: 1rem;
+  text-align: left;
+}
+
+.header-detalles h1 {
+  margin: 0;
+  font-size: 1.8rem;
+  color: #3b0a82;
+}
+
+.descuento-detalles {
+  max-width: 1000px;
+  margin: 3rem auto;
+  padding: 0 2rem;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 18px;
+}
+
+.linea-detalle {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  margin-bottom: 1rem;
+}
+
+.linea-detalle.descripcion {
+  flex-direction: column;
+  align-items: center;
+}
+
+.etiqueta {
+  font-weight: bold;
+  color: #3b0a82;
+}
+
+.texto-descripcion {
+  margin-top: 0.5rem;
+  background-color: transparent;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  color: #333;
+  font-size: 1rem;
+  max-width: 800px;
+  text-align: center;
+}
+
+.boton-volver {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.btn-volver {
+  background-color: #d1a9f9;
+  color: #3b0a82;
+  border: 2px solid #3b0a82;
+  padding: 0.6rem 2rem;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-volver:hover {
+  background-color: #c89cf5;
+}
+
+
+
+
+
+  

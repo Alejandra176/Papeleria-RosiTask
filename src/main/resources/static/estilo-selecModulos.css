@@ -1,0 +1,210 @@
+/* Estilos base */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f9f5ff;
+    min-height: 100vh;
+}
+
+/* Header morado mejorado */
+.header-modulo {
+    background-color: #6b4c9a;
+    border-bottom: none;
+    color: white;
+    padding: 0 2rem; /* Reducir padding vertical */
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    /* box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   height: 100px; /* Altura fija */
+}
+
+/* Logo ajustado */
+.logo-modulo {
+    flex: 1;
+    min-width: 0;
+    padding-right: 1rem; /* Espacio adicional */
+}
+
+.logo-modulo h1 {
+    font-size: 1.5rem; /* Tamaño fijo para desktop */
+    font-weight: 700;
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Contenedor de acciones - Ajuste clave */
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding-left: 1rem; /* Espacio antes de los íconos */
+    padding-right: 1rem; /* Espacio después del perfil */
+    margin-right: 1.5rem;
+    background-color: rgba(255, 255, 255, 0.05); /* Fondo sutil */
+    height: 100%; /* Ocupa toda la altura del header */
+    border-left: 1px solid rgba(255, 255, 255, 0.1); /* Separador visual */
+}
+
+/* Botón de notificaciones */
+.notification-btn {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    position: relative;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+}
+
+.notification-btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.notification-badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: #ff5e6c;
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    font-size: 0.75rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilos para el botón de perfil */
+.profile-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+   background-color: rgba(255, 255, 255, 0.1);
+    transition: all 0.3s;
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.profile-btn:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.profile-img {
+    font-size: 1.5rem;
+    color: white;
+    flex-shrink: 0;
+}
+
+.profile-name {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 120px;
+}
+.logo-modulo h1 {
+   font-size: 2.5rem; /* o prueba con 3rem si quieres más grande */
+    font-weight: 700;
+    margin: 0;
+    padding: 0.5rem 0;
+}
+
+/* Contenedor principal */
+.contenedor {
+   margin-top: 100px;
+    padding: 2rem 1rem;
+    min-height: calc(100vh - 80px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(to bottom, #f4e4ff, #cba8e0);
+     height: calc(100vh - 100px);/* para que no desborde */
+        overflow: hidden;/* asegúrate de no permitir scroll interno */
+
+}
+
+/* Grid de módulos en 3 columnas CON SEPARACIÓN FIJA */
+.grid-modulos {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    width: 100%;
+    max-width: 1200px;
+     flex-wrap: wrap;
+    overflow: hidden;
+}
+
+/* Columnas individuales con margen fijo */
+.columna-modulos {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 0 2rem; /* Antes 6rem. Ahora más compacto. */
+    flex: 1 1 auto;
+    overflow: hidden;
+}
+
+/* Módulos */
+.modulo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 160px;
+    height: 160px;
+    border: 2px solid #4e2c61;
+    border-radius: 50%;
+    background-color: transparent;
+    color: #4e2c61;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+}
+
+.modulo:hover {
+    background-color: #e8d7f1;
+    transform: scale(1.05);
+}
+
+.modulo i {
+    font-size: 3.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.titulo-modulo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: white;
+    margin: 0;
+    white-space: nowrap;
+}
+
+html, body {
+    overflow: hidden;
+    height: 100%;
+}
+
+

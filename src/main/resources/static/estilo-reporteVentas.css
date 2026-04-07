@@ -1,0 +1,82 @@
+/* Estilo del fondo inspirado en la imagen */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background: white;
+}
+
+/* Encabezado */
+.header {
+     padding: 1rem 2rem;
+    color: #2c035b;
+  }
+.header-reporteVenta {
+    background-color: #f9ff92; 
+    padding: 0.3rem 2rem;
+    color: #2c035b;
+  
+  }
+
+ header h1 {
+    color: #330066;
+    font-size: 2rem;
+    text-align: center;
+  }
+main {
+    padding: 2rem;
+  }
+/* Tabla con mejor contraste sobre el fondo */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Manteniendo tus colores originales pero con ajustes */
+th, td {
+    border: 1px solid #d1e0f0;
+    padding: 12px;
+    text-align: center;
+}
+
+th {
+    background-color: #e6e6f0;
+    color: #4b0082;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #f5f9ff;
+}
+
+tr:hover {
+    background-color: #ebf3ff;
+}
+
+/* Botón con estilo mejorado */
+.boton-volver {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.btn-volver {
+    background-color: #e3b5ff;
+    border: 2px solid #3b0a82;
+    color: #3b0a82;
+    padding: 12px 60px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.btn-volver:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0,0,0,0.15);
+}

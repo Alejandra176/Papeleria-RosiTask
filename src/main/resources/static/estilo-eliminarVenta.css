@@ -1,0 +1,84 @@
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: rgba(0, 0, 0, 0.2);
+            font-family: 'Segoe UI', sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .modal {
+            width: 400px; /* Ajusté el ancho para que se parezca más */
+            background-color: white;
+            border: 3px solid #e8a5a5;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            border-radius: 10px; /* Añadí bordes redondeados */
+            overflow: hidden; /* Asegura que el contenido no se salga de los bordes redondeados */
+        }
+
+        .modal-header {
+            background-color: #e8a5a5;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 2px solid #e8a5a5;
+        }
+
+        .modal-header h2 {
+            margin: 0;
+            color: #2d004d;
+            font-size: 24px; /* Ajusté el tamaño de la fuente */
+            font-weight: bold; /* Añadí negrita */
+        }
+
+        .modal-body {
+            padding: 30px; /* Reduje el padding */
+            text-align: center;
+        }
+
+        .pregunta {
+            font-size: 20px; /* Reduje el tamaño de la fuente */
+            color: #2d004d;
+            margin-bottom: 20px; /* Reduje el margen */
+            font-weight: bold; /* Añadí negrita */
+        }
+
+        .nombre {
+            font-size: 18px; /* Reduje el tamaño de la fuente */
+            color: #2d004d;
+            margin-bottom: 30px; /* Reduje el margen */
+        }
+
+        .botones {
+            display: flex;
+            justify-content: center;
+            gap: 20px; /* Reduje el espacio entre botones */
+        }
+
+        .cancelar, .eliminar {
+            padding: 10px 20px; /* Reduje el padding de los botones */
+            border: 2px solid #2d004d;
+            font-size: 16px; /* Reduje el tamaño de la fuente de los botones */
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+            min-width: 100px; /* Reduje el ancho mínimo de los botones */
+            transition: transform 0.2s ease;
+        }
+
+        .cancelar {
+            background-color: #e0b4f1;
+            color: #2d004d;
+        }
+
+        .eliminar {
+            background-color: #d4f9d4;
+            color: #2d004d;
+        }
+
+        .cancelar:hover, .eliminar:hover {
+            transform: scale(1.03); /* Reduje el efecto hover */
+        }
+    

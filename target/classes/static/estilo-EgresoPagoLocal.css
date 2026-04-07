@@ -1,0 +1,118 @@
+/* Fuente general y fondo */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+/* Encabezado de edición */
+.header-registrar {
+  background-color: #fae4bd; /* Color de edición */
+  padding: 1rem 2rem;
+  width: 100%;
+  text-align: center;
+  color: #2c035b;
+}
+
+.header-registrar h1 {
+  margin: 0;
+  font-size: 2rem;
+  color: #330066;
+}
+
+/* Contenedor del formulario SIN fondo ni borde */
+.formulario {
+  padding: 25px 30px;
+  width: 100%;
+  max-width: 600px;
+  box-sizing: border-box;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Sección de etiquetas destacadas */
+.header-id {
+  font-weight: bold;
+  font-size: 1.1em;
+  margin: 20px 0 10px;
+  color: #2c035b;
+}
+
+/* Campos del formulario */
+.campo {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 18px;
+}
+
+.campo label {
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 6px;
+  font-size: 1em;
+}
+
+.campo input[type="text"],
+.campo input[type="date"],
+.campo select {
+  padding: 9px;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  color: #330066;
+  background-color: #fff;
+}
+
+/* Botones */
+.acciones {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.acciones button {
+  font-size: 1rem;
+  padding: 0.7rem 1.5rem;
+  border: 2px solid #330066;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  min-width: 130px;
+  transition: all 0.2s ease;
+}
+
+/* Estilos individuales */
+button.registrar {
+  background-color: #d9f5c7;
+  color: #330066;
+}
+
+button.cancelar {
+  background-color: #fcd0e2;
+  color: #330066;
+}
+
+/* Responsive para pantallas pequeñas */
+@media (max-width: 600px) {
+  .formulario {
+    padding: 20px;
+    max-width: 95%;
+  }
+
+  .acciones {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .acciones button {
+    width: 100%;
+  }
+}

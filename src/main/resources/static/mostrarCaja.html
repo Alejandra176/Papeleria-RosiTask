@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cierre de Caja</title>
+  <link rel="stylesheet" href="mostrarCaja.css" />
+</head>
+<body>
+  <header class="header-cierre">
+    <h1>Cierre de caja</h1>
+  </header>
+
+  <main class="cierre-caja">
+    <div class="base-caja">
+      <span>Base de la caja:</span>
+      <div class="valor-base">$ 20.000</div>
+    </div>
+
+    <form class="formulario">
+      <div class="fila-campos">
+        <div class="columna">
+          <div class="campo">
+            <label>ID Descuadre</label>
+            <input type="text" value="2" readonly />
+          </div>
+          <div class="campo">
+            <label>Fecha del descuadre</label>
+            <input type="date" />
+          </div>
+          <div class="campo">
+            <label>Monto esperado</label>
+            <input type="number" id="esperado" placeholder="$" />
+          </div>
+          <div class="campo">
+            <label>Monto real</label>
+            <input type="number" id="real" placeholder="$" />
+          </div>
+        </div>
+
+        <div class="columna">
+          <div class="campo">
+            <label>Tipo de descuadre</label>
+            <select>
+              <option disabled selected>Seleccione una opción</option>
+              <option>Error humano</option>
+              <option>Problemas Operativos</option>
+              <option>Fraude</option>
+              <option>Transacción no monetaria</option>
+            </select>
+          </div>
+          <div class="campo">
+            <label>Estado</label>
+            <select>
+              <option disabled selected>Seleccione estado</option>
+              <option>Abierto</option>
+              <option>Revisado</option>
+              <option>Cerrado</option>
+            </select>
+          </div>
+          <div class="campo">
+            <label>Diferencia</label>
+            <input type="text" id="diferencia" placeholder="$" readonly />
+          </div>
+          <div class="campo">
+            <label>Observaciones</label>
+            <input type="text" placeholder="Escriba una observación..." />
+          </div>
+        </div>
+      </div>
+
+      <div class="acciones">
+        <button type="submit" class="registrar">Registrar</button>
+        <a href="seleccionModulo.html" class="cancelar">Cancelar</a>
+      </div>
+    </form>
+  </main>
+
+  <script>
+    const esperado = document.getElementById("esperado");
+    const real = document.getElementById("real");
+    const diferencia = document.getElementById("diferencia");
+
+    function calcularDiferencia() {
+      const val1 = parseFloat(esperado.value) || 0;
+      const val2 = parseFloat(real.value) || 0;
+      diferencia.value = `$ ${Math.abs(val1 - val2).toFixed(2)}`;
+    }
+
+    esperado.addEventListener("input", calcularDiferencia);
+    real.addEventListener("input", calcularDiferencia);
+  </script>
+</body>
+</html>

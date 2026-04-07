@@ -1,0 +1,75 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: white;
+}
+
+.header-detalles {
+  background-color: #d4f4f6;
+  padding: 1rem;
+  text-align: left;
+}
+
+.header-detalles h1 {
+  margin: 0;
+  font-size: 1.8rem;
+  color: #3b0a82;
+}
+
+.proveedor-detalles {
+  max-width: 1000px;
+  margin: 3rem auto;
+  padding: 0 2rem;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 18px;
+}
+
+.info-detalles {
+  display: flex;
+  justify-content: space-between;
+  gap: 10rem;
+  margin: 40px 0;
+}
+
+.info-detalles .columna {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.info-detalles .columna p {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.info-detalles .columna p strong {
+  font-weight: bold;
+  width: 225px;
+  display: inline-block;
+  color: #000;
+}
+
+.boton-volver {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.btn-volver {
+  background-color: #d1a9f9;
+  color: #3b0a82;
+  border: 2px solid #3b0a82;
+  padding: 12px 80px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.btn-volver:hover {
+  background-color: #c89cf5;
+}

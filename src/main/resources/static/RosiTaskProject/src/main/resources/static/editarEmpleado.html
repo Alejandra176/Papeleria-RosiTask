@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Editar Empleado</title>
+<link rel="stylesheet" href="estilo-regisEmpleado.css" />
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+	<header class="header-editar">
+		<h1>editar Empleado</h1>
+	</header>
+	<main>
+		<form class="formulario" id="formEditar">
+
+
+			<div class="campo">
+				<label>ID del Empleado</label> <span id="idEmpleadoTexto"></span> <input
+					type="hidden" id="idEmpleado" />
+			</div>
+
+			<div class="campo">
+				<label for="nombre">Nombre del Empleado</label> <input type="text"
+					id="nombreEmpleado" placeholder="Ej: María José" required>
+			</div>
+
+			<div class="campo">
+				<label for="apellido">Apellido del Empleado</label> <input
+					type="text" id="apellidoEmpleado" placeholder="Ej: González López"
+					required>
+			</div>
+
+			<div class="campo">
+				<label for="tipoDocumento">Tipo de Documento</label> <select
+					id="tipoDocumento">
+					<option value="" disabled selected>Seleccione un tipo</option>
+					<option value="CC">Cédula de ciudadanía</option>
+					<option value="CE">Cédula de extranjería</option>
+					<option value="PA">Pasaporte</option>
+					<option value="TI">Tarjeta de identidad</option>
+				</select>
+			</div>
+
+			<div class="campo">
+				<label for="numeroDocumento">Número de Documento</label> <input
+					type="text" id="numeroDocumento" required>
+			</div>
+
+			<div class="campo">
+				<label for="fechaNacimiento">Fecha de Nacimiento</label> <input
+					type="date" id="fechaNacimiento" required>
+			</div>
+
+			<div class="campo">
+				<label for="direccion">Dirección Completa</label> <input type="text"
+					id="direccion" required>
+			</div>
+
+			<div class="campo">
+				<label for="telefono">Teléfono</label> <input type="text"
+					id="telefono" required>
+			</div>
+
+			<div class="campo">
+				<label for="correo">Correo Electrónico</label> <input type="email"
+					id="correo" required>
+			</div>
+
+			<div class="campo">
+				<label for="cargo">Cargo</label> <select id="cargo">
+					<option selected>Administrador</option>
+					<option>Asistente</option>
+				</select>
+			</div>
+
+			<div class="campo">
+				<label for="salario">Salario </label> <input type="text"
+					id="salario" required>
+			</div>
+
+			<div class="campo">
+				<label for="fechaIngreso">Fecha de Ingreso</label> <input
+					type="date" id="fechaIngreso" required>
+			</div>
+
+			<div class="campo">
+				<label for="estado">Estado</label> <select id="estado" required>
+					<option value="" disabled selected>Seleccione</option>
+					<option value="activo">Activo</option>
+					<option value="inactivo">Inactivo</option>
+					<option value="prueba">Periodo de prueba</option>
+					<option value="vacaciones">En vacaciones</option>
+					<option value="licencia">Licencia médica</option>
+				</select>
+			</div>
+
+			<div class="acciones">
+				<button type="submit" class="registrar">Guardar cambios</button>
+				<button type="button" class="cancelar"
+					onclick="window.location.href='moduloProducto.html'">Cancelar</button>
+			</div>
+		</form>
+	</main>
+	<script src="editarEmpleado.js"></script>
+</body>
+</html>

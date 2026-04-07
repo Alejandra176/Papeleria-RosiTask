@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Detalles de la Venta</title>
+  <link rel="stylesheet" href="estilo-registrarProducto.css" />
+</head>
+<body>
+
+  <header class="header header-detalles">
+    <h1>Detalles de la Venta</h1>
+  </header>
+
+  <main class="contenido-detalles">
+
+    <section class="tabla-detalles">
+      <table class="tabla-producto">
+  <tr>
+    <td class="etiqueta"><strong>ID de la Venta</strong></td>
+    <td id="detalle-id"></td>
+  </tr>
+  <tr>
+    <td class="etiqueta"><strong>Producto</strong></td>
+    <td id="detalle-producto"></td>
+  </tr>
+  <tr>
+    <td class="etiqueta"><strong>Fecha de la Venta</strong></td>
+    <td id="detalle-fecha"></td>
+  </tr>
+  <tr>
+    <td class="etiqueta"><strong>Nombre del Empleado</strong></td>
+    <td id="detalle-empleado"></td>
+  </tr>
+  <tr>
+    <td class="etiqueta"><strong>Cantidad</strong></td>
+    <td id="detalle-cantidad"></td>
+  </tr>
+  <tr>
+    <td class="etiqueta"><strong>Precio Unitario</strong></td>
+    <td id="detalle-precio-unitario"></td>
+  </tr>
+  <tr>
+    <td class="etiqueta"><strong>Descuento (%)</strong></td>
+    <td id="detalle-descuento"></td>
+  </tr>
+  <tr>
+    <td class="etiqueta"><strong>Total Venta</strong></td>
+    <td id="detalle-total"></td>
+  </tr>
+  <tr>
+    <td class="etiqueta"><strong>Forma de Pago</strong></td>
+    <td id="detalle-forma-pago"></td>
+  </tr>
+  <tr>
+    <td class="etiqueta"><strong>Promoción</strong></td>
+    <td id="detalle-promocion"></td>
+  </tr>
+</table>
+    </section>
+
+    <div class="boton-volver">
+      <button type="button" class="btn-volver" onclick="window.location.href='mostrarVentas.html'">Volver</button>
+    </div>
+
+  </main>
+  
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="detallesVenta.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Login - Papelería Rosita</title>
+    <link rel="stylesheet" href="estilo-login.css">
+    <link rel="stylesheet" href="https://unpkg.com/primeicons/primeicons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="contenedor">
+        <div class="lado-izquierdo">
+            <img src="/img/login1.png" alt="Papelería" class="imagen-fondo">
+            <div class="texto-papeleria">
+                <h1>Papelería<br>Rosita</h1>
+            </div>
+        </div>
+        <div class="lado-derecho">
+            <div class="encabezado">
+                <h1 class="titulo-principal">Bienvenido</h1>
+                <p class="subtitulo">Ingresar correo y contraseña</p>
+            </div>
+            <div class="formulario">
+                <form id="loginForm">
+                    <div class="campo">
+                        <i class="pi pi-user icono"></i>
+                        <input type="text" id="user_email" placeholder="correo" class="entrada" required>
+                    </div>
+                    <div class="campo">
+                        <i class="pi pi-lock icono"></i>
+                        <input type="password" id="user_pass"  placeholder="Contraseña" class="entrada" required>
+                    </div>
+                    <button type="submit" class="boton-ingresar">Ingresar</button>
+                    <div id="message" style="margin-top: 10px; color: red;"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="login.js"></script>
+    
+</body>
+</html>

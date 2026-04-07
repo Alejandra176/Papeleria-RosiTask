@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Detalles del Empleado</title>
+  <link rel="stylesheet" href="estilo-registrarEmpleado.css" />
+</head>
+<body>
+
+ <header class="header header-detalles">
+    <h1>Detalles del Empleado</h1>
+     <div class="botones-reportes">
+        
+<div >
+ <button type="boton-ReporteVenta" class="btn-ReporteVenta"
+	onclick="window.location.href='reporteVentas.html'">Reporte Venta</button>
+</div>
+    </div>
+</header>
+
+  <main class="contenido-detalles">
+
+    <section class="info-principal">
+      <div class="columna-izquierda">
+        <p><strong>ID del empleado</strong> <span id="idEmpleadoTexto"></span></p>
+        <p><strong>Nombre</strong> &nbsp;<span id="nombreEmpleado"></span></p>
+        <p><strong>Apellido</strong> &nbsp;<span id="apellidoEmpleado"></span></p>
+        <p><strong>Tipo Documento</strong> &nbsp;<span id="tipoDocumento"></span></p>
+        <p><strong>Número Documento</strong> &nbsp; <span id="numeroDocumento"></span></p>
+        <p><strong>Fecha Nacimiento</strong> &nbsp; <span id="fechaNacimiento"></span></p>
+        <p><strong>Dirección</strong> &nbsp;<span id="direccion"></span></p>
+      </div>
+      
+      <div class="columna-derecha">
+        <p><strong>Teléfono</strong> &nbsp;<span id="telefono"></span></p>
+        <p><strong>Correo</strong> &nbsp;<span id="correo"></span></p>
+        <p><strong>Cargo</strong> &nbsp;<span id="cargo"></span></p>
+        <p><strong>Salario</strong> &nbsp;<span id="salario"></span></p>
+        <p><strong>Fecha de Ingreso</strong> &nbsp; <span id="fechaIngreso"></span></p>
+        <p><strong>Estado</strong> &nbsp;<span id="estado"></span></p>
+      </div>
+    </section>
+
+ <div class="acciones">
+    <div > <button type="boton-volver" class="btn-volver"
+	onclick="window.location.href='mostrarNomina.html'">Volver</button>
+</div>
+   
+  </main>
+<script src="detallesEmpleado.js"></script>
+</body>
+</html>

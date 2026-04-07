@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Registrar Proveedor</title>
+  <link rel="stylesheet" href="estilo-registrarProveedor.css" />
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+  <header class="header-registrar">
+    <h1>Registrar Proveedor</h1>
+  </header>
+  <main class="registrar-proveedor">
+    <form class="formulario" method="post" action="/proveedores">
+      <div class="fila-campos">
+        <div class="columna">
+          <div class="campo">
+            <label for="nombre">Nombre proveedor</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Lina" required />
+          </div>
+      
+          <div class="campo">
+            <label for="tipoDocumento">Tipo Documento</label>
+            <select id="tipoDocumento" name="tipoDocumento" required>
+              <option disabled selected>Selecciona un tipo</option>
+              <option value="Cédula">Cédula</option>
+              <option value="NIT">NIT</option>
+              <option value="Pasaporte">Pasaporte</option>
+            </select>
+          </div>
+          <div class="campo">
+            <label for="numeroDocumento">Número Documento</label>
+            <input type="text" id="numeroDocumento" name="numeroDocumento" placeholder="10023454667" required />
+          </div>
+          
+         	<div class="campo">
+						<label for="ciudad">Ciudad</label> <select id="ciudad"
+							name="ciudad" required>
+							<option disabled selected>Selecciona una ciudad</option>
+							<option value="Bogotá">Bogotá (Capital)</option>
+							<option value="Medellín">Medellín</option>
+							<option value="Cali">Cali</option>
+							<option value="Barranquilla">Barranquilla</option>
+							<option value="Cartagena">Cartagena</option>
+							<option value="Cúcuta">Cúcuta</option>
+							<option value="Santa Marta">Santa Marta</option>
+							<option value="Pereira">Pereira</option>
+							<option value="Manizales">Manizales</option>
+							<option value="Bucaramanga">Bucaramanga</option>
+							<option value="Villavicencio">Villavicencio</option>
+							<option value="Ibagué">Ibagué</option>
+							<option value="Pasto">Pasto</option>
+							<option value="Armenia">Armenia</option>
+							<option value="Neiva">Neiva</option>
+							<option value="Sincelejo">Sincelejo</option>
+							<option value="Popayán">Popayán</option>
+							<option value="Riohacha">Riohacha</option>
+							<option value="Montería">Montería</option>
+							<option value="Valledupar">Valledupar</option>
+						</select>
+					</div>
+          
+          
+          <div class="campo">
+            <label for="direccion">Dirección</label>
+            <input type="text" id="direccion" name="direccion" placeholder="Calle 134 # 47 - 52" required />
+          </div>
+        </div>
+
+        <div class="columna">
+          <div class="campo">
+            <label for="telefono">Teléfono</label>
+            <input type="text" id="telefono" name="telefono" placeholder="3123431234" required />
+          </div>
+          <div class="campo">
+            <label for="correo">Correo</label>
+            <input type="email" id="correo" name="correo" placeholder="ejample@proveedor.co" required />
+          </div>
+          <div class="campo">
+            <label for="fechaIngreso">Fecha de Ingreso</label>
+            <input type="date" id="fechaIngreso" name="fechaIngreso" required />
+          </div>
+          <div class="campo">
+            <label for="observaciones">Observaciones</label>
+            <textarea id="observaciones" name="observaciones" placeholder="Proveedor Nuevo Pepe"></textarea>
+          </div>
+        </div>
+      </div>
+      <div class="acciones">
+        <button type="submit" class="registrar">Registrar</button>
+        <a href="mostrarProveedores.html" class="cancelar">Cancelar</a>
+      </div>
+    </form>
+  </main>
+  
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="registrarProveedor.js"></script>
+</body>
+</html>

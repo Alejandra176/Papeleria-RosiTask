@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Detalles del Proveedor</title>
+  <link rel="stylesheet" href="estilo-registrarEmpleado.css" />
+</head>
+<body>
+
+<header class="header header-detalles">
+  <h1>Detalles del Proveedor</h1>
+  <div class="botones-reportes">
+    <div>
+      <button type="button" class="btn-ReporteVenta" onclick="window.location.href='reporteVentas.html'">Reporte Venta</button>
+    </div>
+    <div class="boton-ReporteAtencionCliente">
+      <button class="btn-ReporteAtencionCliente">Reporte atención al cliente</button>
+    </div>
+  </div>
+</header>
+
+<main class="contenido-detalles">
+
+  <section class="info-principal">
+    <div class="columna-izquierda">
+      <p><strong>ID Proveedor</strong>: <span id="idProveedor"></span></p>
+      <p><strong>Nombre</strong>: <span id="nombreProveedor"></span></p>
+      <p><strong>Teléfono</strong>: <span id="telefono"></span></p>
+      <p><strong>Correo</strong>: <span id="correo"></span></p>
+      <p><strong>Dirección</strong>: <span id="direccion"></span></p>
+    </div>
+    
+    <div class="columna-derecha">
+      <p><strong>Ciudad</strong>: <span id="ciudad"></span></p>
+      <p><strong>Tipo Documento</strong>: <span id="tipoDocumento"></span></p>
+      <p><strong>Número Documento</strong>: <span id="numeroDocumento"></span></p>
+      <p><strong>Fecha Registro</strong>: <span id="fechaRegistro"></span></p>
+      <p><strong>Observación</strong>: <span id="observacion"></span></p>
+    </div>
+  </section>
+
+  <div>
+    <button type="button" class="btn-volver" onclick="window.location.href='mostrarProveedores.html'">Volver</button>
+  </div>
+
+</main>
+
+<!-- Axios CDN -->
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="detallesProveedor.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es" lang="es">
+<head>
+  <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Editar Venta</title>
+  <link rel="stylesheet" href="estilo-editarVenta.css" />
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+  <header class="header-editar">
+    <h1>Editar Venta</h1>
+  </header>
+  <main>
+    <form class="formulario" action="#" method="post" id="formEditarVenta">
+        <div class="campo">
+        <label>ID de la venta</label> <span id="idVentaTexto"></span>
+        <input type="hidden" id="idVenta" />
+      </div>
+
+      <div class="campo">
+        <label for="producto">Producto</label>
+        <select id="producto" required>
+  			<option value="" disabled selected>Seleccione un producto</option>
+		</select>
+      </div>
+      
+      <div class="campo">
+				<label for="fechaVenta">Fecha de la venta</label> 
+                <input type="date" id="fechaVenta" required readonly>
+			</div>
+
+      <div class="campo">
+				<label for="nombre">Nombre del Empleado</label> <input type="text"
+					id="nombreEmpleado" placeholder="Ej: María José" required>
+			</div>
+
+      <div class="campo">
+        <label for="cantidad">Cantidad</label>
+        <input type="number" id="cantidad" placeholder="2" />
+      </div>
+
+      <div class="campo">
+        <label for="precioUnitario">Precio unitario</label>
+        <input type="text" id="precioUnitario" placeholder="$"required readonly>
+      </div>
+
+      <div class="campo">
+        <label for="descuento">Descuento (%)</label>
+        <input type="number" id="descuento" name="descuento" min="0" max="100" placeholder="Ej: 10" value="0" required>
+      </div>
+
+      <div class="campo">
+        <label for="totalVenta">Total de venta</label>
+        <input type="text" id="totalVenta" value="$" readonly/>
+      </div>
+
+<div class="campo">
+  <label for="formaPago">Forma de pago</label>
+  <select id="formaPago" name="formaPago" required>
+    <option value="" disabled selected>Seleccione una forma de pago</option>
+    <option value="efectivo">Efectivo</option>
+    <option value="otro">Otro</option>
+  </select>
+</div>
+
+
+     <div class="campo">
+       <label for="promocion">Promoción</label>
+        <select id="promocion" name="promocion">
+         <option value="" disabled selected>Seleccione una promoción</option>
+         <option value="ninguna">Ninguna</option>
+         <option value="2x1">2x1</option>
+         <option value="regalo">Producto de regalo</option>
+         <option value="combo">Combo especial</option>
+        </select>
+      </div>
+
+      <div class="acciones">
+        <button type="submit" class="cambios">Guardar cambios</button>
+        <button type="button"  class="cancelar" onclick="window.location.href='mostrarVentas.html'">Cancelar</button>
+      </div>
+    </form>
+  </main>
+  
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="editarVenta.js"></script>
+  
+</body>
+</html>

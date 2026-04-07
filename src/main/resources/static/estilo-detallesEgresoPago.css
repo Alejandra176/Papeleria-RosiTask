@@ -1,0 +1,84 @@
+/* Fuente y fondo general */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: white;
+}
+
+/* Header personalizado para detalles */
+.header-detalles {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #d7f2f2; /* Azul cielo claro */
+  color: #2c035b;
+}
+
+.header-detalles h1 {
+  margin: 0;
+  font-size: 2rem;
+  color: #330066;
+}
+
+/* Contenedor principal */
+main {
+  padding: 2rem;
+}
+
+/* Contenedor horizontal para dos bloques */
+.detalle-contenedor-horizontal {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* Bloques de información SIN fondo, borde ni sombra */
+.bloque-detalle {
+  flex: 1 1 45%;
+  padding: 1.5rem;
+  box-sizing: border-box;
+}
+
+.bloque-detalle h2 {
+  color: #3b0a82;
+  border-bottom: 2px solid #dcdcdc;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+/*
+.bloque-detalle p {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  color: #000;
+}*/
+
+.bloque-detalle p strong {
+  color: #3b0a82;
+}
+
+/* Botón de volver */
+.acciones {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.btn-volver {
+  background-color: #e3b5ff;
+  border: 2px solid #3b0a82;
+  color: #3b0a82;
+  padding: 12px 60px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-volver:hover {
+  background-color: #d6a3ff;
+}

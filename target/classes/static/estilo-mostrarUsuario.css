@@ -1,0 +1,230 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4e4ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Contenedor principal */
+.usuario-container {
+    width: 100%;
+    max-width: 800px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(106, 33, 168, 0.1);
+    overflow: hidden;
+}
+
+/* Encabezado */
+.usuario-header {
+    background: linear-gradient(135deg, rgb(134, 67, 199), rgb(134, 67, 199));
+    color: white;
+    padding: 20px 30px;
+}
+
+.usuario-header h1 {
+    font-weight: 500;
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.usuario-header i {
+    font-size: 1.5rem;
+}
+
+/* Tarjeta de usuario */
+.usuario-card {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+}
+
+.usuario-avatar {
+    align-self: center;
+    margin-bottom: 25px;
+}
+
+.usuario-avatar i {
+    font-size: 5rem;
+    color: rgb(134, 67, 199);
+    background-color: #f0e9ff;
+    padding: 20px;
+    border-radius: 50%;
+}
+
+/* Información del usuario */
+.usuario-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.info-label {
+    font-weight: 500;
+    color: #8643c7;
+    min-width: 120px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.info-label i {
+    width: 20px;
+    text-align: center;
+}
+
+.info-value {
+    flex: 1;
+    color: #555;
+}
+
+/* Botón mostrar contraseña */
+.show-password {
+    background: none;
+    border: none;
+    color: #8643c7;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-left: 10px;
+    transition: all 0.3s;
+}
+
+.show-password:hover {
+    color: #8643c7;
+}
+
+/* Acciones */
+.usuario-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.btn-editar, .btn-cerrar {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-editar {
+    background-color: #a05adf;
+    color: white;
+}
+
+.btn-editar:hover {
+    background-color:  rgb(141, 32, 240);
+}
+
+.btn-cerrar {
+    background-color: #f0e9ff;
+    color: #8643c7;
+}
+
+.btn-cerrar-sesion {
+    background-color: #d9534f;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap:  8px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-cerrar-sesion:hover {
+    background-color: #c9302c;
+}
+
+
+.btn-cerrar:hover {
+    background-color: #e0d0ff;
+}
+
+.btn-registrar {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #4caf50; /* verde */
+    color: white;
+    transition: background-color 0.3s;
+}
+
+.btn-registrar:hover {
+    background-color: #388e3c; /* verde oscuro */
+}
+
+input.info-value {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+
+
+
+/* Responsive */
+@media (max-width: 600px) {
+    .usuario-header h1 {
+        font-size: 1.4rem;
+    }
+    
+    .usuario-card {
+        padding: 20px;
+    }
+    
+    .info-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+    
+    .usuario-actions {
+        flex-direction: column;
+    }
+    
+    .btn-editar, .btn-cerrar {
+        width: 100%;
+        justify-content: center;
+    }
+}

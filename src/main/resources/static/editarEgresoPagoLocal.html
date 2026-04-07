@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Editar Egreso - Pago Local</title>
+  <link rel="stylesheet" href="estilo-EgresoPagoLocal.css">
+</head>
+<body>
+  <div class="header-registrar">
+    <h1>Editar Egreso Pago del Local</h1>
+  </div>
+
+  <form class="formulario">
+
+    <div class="header-id">ID del egreso: 1</div>
+
+    <div class="campo">
+      <label for="fechaEgreso">Fecha</label>
+      <input type="date" id="fechaEgreso" name="fechaEgreso">
+    </div>
+
+    <div class="campo">
+      <label for="valorEgreso">Valor</label>
+      <input type="text" id="valorEgreso" name="valorEgreso">
+    </div>
+
+    <div class="campo">
+      <label for="metodoEgreso">Método de pago</label>
+      <select id="metodoEgreso" name="metodoEgreso">
+        <option value="">Seleccione</option>
+        <option value="efectivo">Efectivo</option>
+        <option value="transferencia">Otro</option>
+      </select>
+    </div>
+
+    <!-- Sección Pago Local -->
+    <div class="header-id">Pago Local</div>
+
+    <div class="campo">
+      <label for="idPagoLocal">ID del pago</label>
+      <input type="text" id="idPagoLocal" name="idPagoLocal" readonly>
+    </div>
+
+    <div class="campo">
+      <label for="montoPago">Monto</label>
+      <input type="text" id="montoPago" name="montoPago">
+    </div>
+
+    <div class="campo">
+      <label for="fechaPagoLocal">Fecha de pago</label>
+      <input type="date" id="fechaPagoLocal" name="fechaPagoLocal">
+    </div>
+
+    <div class="campo">
+      <label for="conceptoPago">Concepto</label>
+      <input type="text" id="conceptoPago" name="conceptoPago">
+    </div>
+
+    <div class="campo">
+      <label for="estadoPago">Estado del pago</label>
+      <select id="estadoPago" name="estadoPago">
+        <option value="">Seleccione</option>
+        <option value="pendiente">Pendiente</option>
+        <option value="pagado">Pagado</option>
+        <option value="anulado">Anulado</option>
+      </select>
+    </div>
+
+    <div class="campo">
+      <label for="factura">Número de factura</label>
+      <input type="text" id="factura" name="factura">
+    </div>
+
+    <div class="campo">
+      <label for="metodoPagoLocal">Método de pago</label>
+      <select id="metodoPagoLocal" name="metodoPagoLocal">
+        <option value="">Seleccione</option>
+        <option value="efectivo">Efectivo</option>
+        <option value="transferencia">Transferencia</option>
+        <option value="tarjeta">Tarjeta</option>
+      </select>
+    </div>
+
+    <div class="campo">
+      <label for="periodoPago">Período</label>
+      <input type="text" id="periodoPago" name="periodoPago">
+    </div>
+
+    <div class="acciones">
+      <button type="submit" class="registrar">Guardar cambios</button>
+      <button type="button"  class="cancelar" onclick="window.location.href='mostrarEgresos.html'">Cancelar</button>
+    </div>
+  </form>
+</body>
+</html>

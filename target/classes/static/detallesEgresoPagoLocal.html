@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Detalles Egreso Pago del Local</title>
+  <link rel="stylesheet" href="estilo-registrarProducto.css" />
+</head>
+<body>
+
+  <header class="header header-detalles">
+    <h1>Detalles Egreso Pago del Local</h1>
+  </header>
+
+  <main class="contenido-detalles">
+
+    <section class="tabla-detalles">
+      <table class="tabla-producto">
+        <tr><td class="etiqueta"><strong>ID del Egreso</strong></td><td id="detalle-id"></td></tr>
+        <tr><td class="etiqueta"><strong>Fecha</strong></td><td id="detalle-fecha"></td></tr>
+        <tr><td class="etiqueta"><strong>Valor</strong></td><td id="detalle-valor"></td></tr>
+        <tr><td class="etiqueta"><strong>Método de Pago</strong></td><td id="detalle-metodo-pago"></td></tr>
+        <tr><td class="etiqueta"><strong>Concepto</strong></td><td id="detalle-concepto"></td></tr>
+        <tr><td class="etiqueta"><strong>Estado del Pago</strong></td><td id="detalle-estado-pago"></td></tr>
+        <tr><td class="etiqueta"><strong>Número de Factura</strong></td><td id="detalle-factura"></td></tr>
+        <tr><td class="etiqueta"><strong>Período</strong></td><td id="detalle-periodo"></td></tr>
+        <tr><td class="etiqueta"><strong>Categoría</strong></td><td id="detalle-categoria"></td></tr>
+      </table>
+    </section>
+
+    <div class="boton-volver">
+      <button type="button" class="btn-volver" onclick="window.location.href='mostrarEgresos.html'">Volver</button>
+    </div>
+
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="detallesEgresoPagoLocal.js"></script>
+
+</body>
+</html>

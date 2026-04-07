@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Detalles Egreso Pago de Nómina</title>
+  <link rel="stylesheet" href="estilo-registrarProducto.css" />
+</head>
+<body>
+
+  <header class="header header-detalles">
+    <h1>Detalles Egreso Pago de Nómina</h1>
+  </header>
+
+  <main class="contenido-detalles">
+
+    <section class="tabla-detalles">
+      <table class="tabla-producto">
+        <tr><td class="etiqueta"><strong>ID del Egreso</strong></td><td id="detalle-id"></td></tr>
+        <tr><td class="etiqueta"><strong>Fecha</strong></td><td id="detalle-fecha"></td></tr>
+        <tr><td class="etiqueta"><strong>Valor</strong></td><td id="detalle-valor"></td></tr>
+        <tr><td class="etiqueta"><strong>Método de Pago</strong></td><td id="detalle-metodo-pago"></td></tr>
+        <tr><td class="etiqueta"><strong>Categoría</strong></td><td id="detalle-categoria"></td></tr>
+        <tr><td class="etiqueta"><strong>Empleado</strong></td><td id="detalle-empleado"></td></tr>
+        <tr><td class="etiqueta"><strong>Cargo</strong></td><td id="detalle-cargo"></td></tr>
+        <tr><td class="etiqueta"><strong>Correo</strong></td><td id="detalle-correo"></td></tr>
+        <tr><td class="etiqueta"><strong>Período Trabajado</strong></td><td id="detalle-periodo"></td></tr>
+        <tr><td class="etiqueta"><strong>Sueldo Base</strong></td><td id="detalle-sueldo"></td></tr>
+        <tr><td class="etiqueta"><strong>Deducciones</strong></td><td id="detalle-deducciones"></td></tr>
+        <tr><td class="etiqueta"><strong>Subsidios</strong></td><td id="detalle-subsidios"></td></tr>
+        <tr><td class="etiqueta"><strong>Horas Extra</strong></td><td id="detalle-horas-extra"></td></tr>
+        <tr><td class="etiqueta"><strong>Neto Pagado</strong></td><td id="detalle-neto"></td></tr>
+      </table>
+    </section>
+
+    <div class="boton-volver">
+      <button type="button" class="btn-volver" onclick="window.location.href='mostrarEgresos.html'">Volver</button>
+    </div>
+
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="detallesEgresoPagoNomina.js"></script>
+
+</body>
+</html>

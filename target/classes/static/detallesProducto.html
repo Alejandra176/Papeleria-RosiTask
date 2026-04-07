@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Detalles del Producto</title>
+  <link rel="stylesheet" href="estilo-registrarEmpleado.css" />
+</head>
+<body>
+
+<header class="header header-detalles">
+  <h1>Detalles del Producto</h1>
+  <div class="botones-reportes">
+    <div>
+      <button type="button" class="btn-ReporteVenta" onclick="window.location.href='reporteVentas.html'">Reporte Venta</button>
+    </div>
+    <div class="boton-ReporteAtencionCliente">
+      <button class="btn-ReporteAtencionCliente">Reporte atención al cliente</button>
+    </div>
+  </div>
+</header>
+
+<main class="contenido-detalles">
+
+  <section class="info-principal">
+    <div class="columna-izquierda">
+      <p><strong>ID del Producto</strong>: <span id="idProducto"></span></p>
+<p><strong>Nombre</strong>: <span id="nombreProducto"></span></p>
+<p><strong>Marca</strong>: <span id="marca"></span></p>
+<p><strong>Descripción</strong>: <span id="descripcion"></span></p>
+<p><strong>Estado</strong>: <span id="estado"></span></p>
+
+    </div>
+    
+    <div class="columna-derecha">
+     <p><strong>Precio Compra</strong>: <span id="precioCompra"></span></p>
+<p><strong>Precio Venta</strong>: <span id="precioVenta"></span></p>
+<p><strong>Fecha Ingreso</strong>: <span id="fechaIngreso"></span></p>
+<p><strong>Cantidad</strong>: <span id="cantidadProducto"></span></p>
+<p><strong>ID Proveedor</strong>: <span id="productoProveedor"></span></p>
+
+    </div>
+  </section>
+
+  <div>
+    <button type="button" class="btn-volver" onclick="window.location.href='mostrarProductos.html'">Volver</button>
+  </div>
+
+</main>
+
+<!-- Axios CDN -->
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="detallesProducto.js"></script>
+
+</body>
+</html>

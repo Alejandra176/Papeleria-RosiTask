@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Editar Producto</title>
+  <link rel="stylesheet" href="estilo-regisProducto.css" />
+</head>
+<body>
+  <header class="header-editar">
+    <h1>Editar Producto</h1>
+  </header>
+  <main>
+    <form class="formulario" id="formEditar">
+
+      <div class="campo">
+        <label>ID del producto</label> <span id="idProductoTexto"></span>
+        <input type="hidden" id="idProducto" />
+      </div>
+
+      <div class="campo">
+        <label for="nombreProducto">Nombre del producto</label>
+        <input type="text" id="nombreProducto" />
+      </div>
+
+      <div class="campo">
+        <label for="marca">Marca</label>
+        <input type="text" id="marca" />
+      </div>
+
+      <div class="campo">
+        <label for="descripcion">Descripción</label>
+        <input type="text" id="descripcion" />
+      </div>
+
+      <div class="campo">
+        <label for="estado">Estado</label>
+        <select id="estado">
+          <option value="Disponible">Disponible</option>
+          <option value="No disponible">No disponible</option>
+        </select>
+      </div>
+
+      <div class="campo">
+        <label for="precioCompra">Precio de compra</label>
+        <input type="number" id="precioCompra" />
+      </div>
+
+      <div class="campo">
+        <label for="precioVenta">Precio de venta</label>
+        <input type="number" id="precioVenta" />
+      </div>
+
+      <div class="campo">
+        <label for="fechaIngreso">Fecha de ingreso</label>
+        <input type="date" id="fechaIngreso" />
+      </div>
+
+      <div class="campo">
+        <label for="cantidadProducto">Cantidad del producto</label>
+        <input type="number" id="cantidadProducto" />
+      </div>
+
+      <div class="campo">
+        <label for="proveedor">Proveedor</label>
+        <select id="proveedor">
+        <option selected>Proveedor</option>
+         </select>
+      </div>
+
+      <div class="acciones">
+        <button type="submit" class="registrar">Guardar cambios</button>
+        <button type="button" class="cancelar" onclick="window.location.href='moduloProducto.html'">Cancelar</button>
+      </div>
+    </form>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="editarProducto.js"></script>
+</body>
+</html>

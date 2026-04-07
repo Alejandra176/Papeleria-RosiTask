@@ -1,0 +1,204 @@
+body {
+	font-family: 'Segoe UI', sans-serif;
+	margin: 0;
+	padding: 0;
+	background: white;
+}
+
+header {
+	padding: 1rem 2rem;
+	color: #2c035b;
+}
+
+.header-registrar {
+	background-color: #d4f8ce;
+	padding: 1rem 2rem;
+	color: #2c035b;
+}
+
+.header-editar {
+	background-color: #fae4bd;
+	padding: 1rem 2rem;
+	color: #2c035b;
+}
+
+header h1 {
+	margin: 0;
+	color: #330066;
+	font-size: 2rem;
+}
+
+main {
+	padding: 2rem;
+}
+
+.formulario {
+	display: flex;
+	flex-direction: column;
+	max-width: 600px;
+	margin: auto;
+}
+
+.campo {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 1.2rem;
+}
+
+.campo label {
+	flex: 1;
+	font-weight: bold;
+	color: #000;
+}
+
+.campo input, .campo select, .campo span {
+	flex: 2;
+	padding: 0.5rem;
+	font-size: 1rem;
+	border: 1px solid #ccc;
+	color: #330066;
+}
+
+.campo span {
+	border: none;
+}
+
+select {
+	background-color: #fff;
+}
+
+.acciones {
+	display: flex;
+	justify-content: center;
+	gap: 1.5rem;
+	margin-top: 2rem;
+}
+
+.acciones button {
+	font-size: 1rem;
+	padding: 0.7rem 1.5rem;
+	border: 2px solid #330066;
+	border-radius: 8px;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+button.registrar {
+	background-color: #d9f5c7;
+	color: #330066;
+}
+
+button.cancelar {
+	background-color: #fcd0e2;
+	color: #330066;
+}
+/*----------------------------------------------*/
+/* CSS detallesEmpleado */
+.header-detalles {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1rem 2rem;
+	background-color: #d7f2f2; /* Mismo color que el header principal */
+	color: #2c035b;
+}
+
+.botones-reportes {
+	display: flex;
+	gap: 1rem; /* Espacio entre botones */
+}
+
+.btn-ReporteVenta {
+	border: 2px solid #3b0a82;
+	color: #3b0a82;
+	padding: 12px 15px;
+	font-size: 15px;
+	font-weight: bold;
+	border-radius: 12px;
+	cursor: pointer;
+	transition: background-color 0.3s;
+}
+
+.btn-ReporteAtencionCliente {
+	border: 2px solid #3b0a82;
+	color: #3b0a82;
+	padding: 12px 20px;
+	font-size: 15px;
+	font-weight: bold;
+	border-radius: 12px;
+	cursor: pointer;
+	transition: background-color 0.3s;
+}
+
+.btn-ReporteVenta {
+	background-color: #f9ff92; /* Amarillo claro */
+}
+
+.btn-ReporteAtencionCliente {
+	background-color: #f075b5; /* rosa claro */
+}
+
+.btn-ReporteVenta:hover {
+	background-color: #f3fb5e; /* Verde más oscuro al pasar mouse */
+}
+
+.btn-ReporteAtencionCliente:hover {
+	background-color: #f2479f; /* Azul más oscuro al pasar mouse */
+}
+/*------------------------------------------------------------------*/
+.info-principal {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 30px;
+	font-size: 30px;
+}
+
+.info-principal p {
+	margin: 10px 0;
+	font-size: 20px;
+}
+
+.tablas-detalles {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 40px;
+	gap: 20px;
+}
+
+table {
+	border-collapse: collapse;
+	width: 100%;
+	max-width: 500px;
+	font-size: 16px;
+}
+
+td {
+	border: 1px solid #ccc;
+	padding: 10px;
+}
+
+.etiqueta {
+	color: #3b0a82;
+	font-weight: 600;
+}
+
+.boton-volver {
+	text-align: center;
+}
+
+.btn-volver {
+	background-color: #e3b5ff;
+	border: 2px solid #3b0a82;
+	color: #3b0a82;
+	padding: 12px 60px;
+	font-size: 16px;
+	font-weight: bold;
+	border-radius: 12px;
+	cursor: pointer;
+	transition: background-color 0.3s;
+}
+
+.btn-volver:hover {
+	background-color: #d6a3ff;
+}

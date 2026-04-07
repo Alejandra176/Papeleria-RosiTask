@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Registrar Producto</title>
+<link rel="stylesheet" href="estilo-regisProducto.css" />
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+	<header class="header-registrar">
+		<h1>Registrar Producto</h1>
+	</header>
+	<main>
+		<form id="formRegistrarProducto" class="formulario">
+			<div class="campo">
+				<label for="nombre">Nombre del producto</label> <input type="text"
+					id="nombreProducto" required />
+			</div>
+			<div class="campo">
+				<label for="marca">Marca</label> <input type="text" id="marca"
+					required />
+			</div>
+			<div class="campo">
+				<label for="descripcion">Descripción</label> <input type="text"
+					id="descripcion" required />
+			</div>
+			<div class="campo">
+				<label for="estado">Estado</label> <select id="estado">
+					<option selected>Disponible</option>
+					<option>No disponible</option>
+				</select>
+			</div>
+			<div class="campo">
+				<label for="precioCompra">Precio de compra</label> <input
+					type="text" id="precioCompra" required />
+			</div>
+			<div class="campo">
+				<label for="precioVenta">Precio de venta</label> <input type="text"
+					id="precioVenta" required />
+			</div>
+			<div class="campo">
+				<label for="fechaIngreso">Fecha de ingreso</label> <input
+					type="date" id="fechaIngreso" required />
+			</div>
+			<div class="campo">
+				<label for="cantidad">Cantidad del producto</label> <input
+					type="text" id="cantidadProducto" required />
+			</div>
+			<div class="campo">
+				<label for="proveedor">Proveedor</label> <select
+					id="productoProveedor">
+					<option selected>Proveedor</option>
+				</select>
+			</div>
+			<div class="acciones">
+				<button type="submit" class="registrar">Registrar</button>
+				<button type="button" class="cancelar">Cancelar</button>
+			</div>
+		</form>
+	</main>
+	<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+	<script src="RegistrarProducto.js"></script>
+</body>
+</html>

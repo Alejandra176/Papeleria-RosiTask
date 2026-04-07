@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Editar Promoción</title>
+  <link rel="stylesheet" href="estilo-registrarProducto.css" />
+  
+  <!-- SweetAlert2 -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  
+</head>
+<body>
+  <header class="header-editar">
+    <h1>Editar Promoción</h1>
+  </header>
+  <main> 
+  <form class="formulario" id="formEditar">
+  
+      <div class="campo">
+            <label>ID Promoción</label><span id="idPromocionTexto"></span>
+             <input type="hidden" id="idPromocion" />
+          </div>
+          
+          <div class="campo">
+            <label for="nombrePromo">Nombre promoción</label>
+            <input type="text" id="nombrePromo" />
+          </div>
+          
+          <div class="campo">
+            <label for="descripcionPromo">Descripción</label>
+            <input type="text" id="descripcionPromo" />
+          </div>
+          
+          <div class="campo">
+            <label for="tipoPromo">Tipo de promoción</label>
+            <select id="tipoPromo">
+              <option value= "4 x 3">4 x 3</option>
+              <option value= "2 x 1">2 x 1</option>
+            </select>
+          </div>
+          
+          <div class="campo">
+            <label for="fechaInicio">Fecha inicio</label>
+            <input type="date" id="fechaInicio"  />
+          </div>
+ 
+          <div class="campo">
+            <label for="fechaFin">Fecha fin</label>
+            <input type="date" id="fechaFin"  />
+          </div>
+          
+          <div class="campo">
+            <label for="estadoPromo">Estado</label>
+            <select id="estadoPromo">
+           <option value="Activo">Activo</option>
+          <option value="Inactivo">Inactivo</option>
+        </select>
+          </div>
+          
+          <div class="campo">
+            <label>ID Producto pago full</label> <span id="idProductoFullTexto"></span>
+            <input type="hidden" id=idProductoFull />
+          </div>
+          
+          <div class="campo">
+            <label for="idProductoBeneficio">ID Producto beneficio</label>
+            <input type="text" id="idProductoBeneficio" name="idProductoBeneficio" />
+          </div>
+     
+      <div class="acciones">
+        <button type="submit" class="registrar">Guardar cambios</button>
+        <button type="button" class="cancelar" onclick="window.location.href='mostrarPromociones.html'">Cancelar</button>
+      </div>
+    </form>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="editarPromocion.js"></script>
+</body>
+</html>

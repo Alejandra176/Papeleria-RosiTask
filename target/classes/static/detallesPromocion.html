@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Detalles de la Promoción</title>
+  <link rel="stylesheet" href="estilo-registrarProducto.css">
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+
+  <header class="header-detalles">
+    <h1>Detalles de la promoción</h1>
+  </header>
+
+  <main class="contenedor-detalles">
+  <div class="info-principal">
+       <table class="tabla-detalles">
+       <tr>
+          <td class="etiqueta">ID Promoción:</td>
+             <td id="detalle-idPromocion"></td>
+          </tr>
+          
+          <tr>
+          <td class="etiqueta">Nombre promoción:</td>
+             <td id="detalle-nombrePromo"></td>
+          </tr>
+          
+          <tr>
+          <td class="etiqueta">Descripción:</td>
+             <td id="detalle-descripcionPromo"></td>
+          </tr>
+          
+          <tr>
+          <td class="etiqueta">Tipo de Promoción:</td>
+             <td id="detalle-tipoPromo"></td>
+          </tr>
+          
+          <tr>
+          <td class="etiqueta">Fecha inicio:</td>
+             <td id="detalle-fechaInicio"></td>
+          </tr>
+        
+          <tr>
+          <td class="etiqueta">Fecha fin:</td>
+             <td id="detalle-fechaFin"></td>
+          </tr>
+          
+          <tr>
+          <td class="etiqueta">Estado:</td>
+             <td id="detalle-estadoPromo"></td>
+          </tr>
+          
+           <tr>
+          <td class="etiqueta">ID Producto pago Full:</td>
+             <td id="detalle-idProductoFull"></td>
+         </tr>
+          
+         <tr>
+          <td class="etiqueta">ID Producto beneficio:</td>
+             <td id="detalle-idProductoBeneficio"></td>
+         </tr>
+      </table>
+   </div>
+          
+     <div class="boton-volver">
+            <p style="margin-bottom: 30px; font-weight: bold; font-size: 18px;">
+            </p>
+            <button class="btn-volver" onclick="window.location.href='mostrarPromociones.html'">Volver</button>
+        </div>
+    </main>
+    
+    <script src="detallesPromocion.js"></script>
+</body>
+</html>

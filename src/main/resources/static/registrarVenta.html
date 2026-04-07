@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es" lang="es">
+<head>
+  <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Registrar Venta</title>
+  <link rel="stylesheet" href="estilo-registrarVenta.css" />
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+  <header class="header-registrar">
+    <h1>Registrar Venta</h1>
+  </header>
+  <main>
+    <form id="formRegistrarVenta" class="formulario" action="#" method="post">
+      <div class="campo">
+  		<label>ID de la venta</label>
+  		<span id="idVenta" >Cargando...</span>
+		</div>
+
+      <div class="campo">
+        <label for="producto">Producto</label>
+        <select id="producto" required>
+  			<option value="" disabled selected>Seleccione un producto</option>
+		</select>
+      </div>
+
+      <div class="campo">
+				<label for="fechaVenta">Fecha de la venta</label> 
+                <input type="date" id="fechaVenta" required readonly>
+			</div>
+
+      <div class="campo">
+				<label for="empleado">Empleado</label>
+        <select id="nombreEmpleado" required>
+  			<option value="" disabled selected>Seleccione un empleado</option>
+		</select>
+      </div>
+			</div>
+
+      <div class="campo">
+        <label for="cantidad">Cantidad</label>
+        <input type="number" id="cantidad" value="2" required/>
+      </div>
+
+      <div class="campo">
+        <label for="precioUnitario">Precio unitario</label>
+        <input type="number" id="precioUnitario" placeholder="$" required readonly>
+      </div>
+
+      <div class="campo">
+        <label for="descuento">Descuento (%)</label>
+        <input type="number" id="descuento" name="descuento" min="0" max="100" placeholder="Ej: 10" value="0" required>
+      </div>
+
+      <div class="campo">
+        <label for="totalVenta">Total de venta</label>
+        <input type="text" id="totalVenta" value="$" readonly />
+      </div>
+
+      <div class="campo">
+  <label for="formaPago">Forma de pago</label>
+  <select id="formaPago" name="formaPago" required>
+    <option value="" disabled selected>Seleccione una forma de pago</option>
+    <option value="efectivo">Efectivo</option>
+    <option value="otro">Otro</option>
+  </select>
+</div>
+
+
+      <div class="campo">
+  <label for="promocion">Promoción</label>
+  <select id="promocion" name="promocion" required>
+    <option value="" disabled selected>Seleccione una promoción</option>
+  </select>
+</div>
+
+      <div class="acciones">
+        <button type="submit" class="registrar">Registrar</button>
+        <button type="button"  class="cancelar" onclick="window.location.href='mostrarVentas.html'">Cancelar</button>
+      </div>
+    </form>
+  </main>
+  <script src="registrarVenta.js"></script>
+</body>
+</html>

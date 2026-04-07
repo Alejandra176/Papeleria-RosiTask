@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Módulo Descuentos</title>
+  
+  <!-- Google Fonts: Inter -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  
+  <!-- PrimeIcons -->
+  <link rel="stylesheet" href="https://unpkg.com/primeicons@6.0.0/primeicons.css" />
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="estilo-mostrarProductos.css" />
+  
+  <!-- SweetAlert2 -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  
+</head>
+<body>
+  <header class="header">
+    <div class="logo">
+    <img src="https://cdn-icons-png.flaticon.com/512/2728/2728447.png" alt="icono" />
+      <h1>Módulo Descuentos</h1>
+    </div>  
+<div class="acciones-header">
+			<i class="pi pi-bell" title="Notificaciones"></i> <i
+				class="pi pi-times-circle" title="Cerrar"
+				onclick="window.location.href='seleccionModulo.html'"></i>
+		</div>
+  </header>
+  
+  <main class="main">
+    <section class="box">
+      <h2>Lista de descuentos</h2>
+
+      <button class="btn-registrar" onclick="window.location.href='registrarDescuento.html'">Registrar descuento</button>
+
+      <div class="barra-busqueda">
+        <i class="pi pi-search"></i>
+        <input type="text" placeholder="Buscar" />
+      </div>
+
+      <table class="tabla-descuentos">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Tipo de descuentos</th>
+            <th>Estado</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody id="tbody-descuentos">
+          <!-- Aquí se insertarán dinámicamente los productos -->
+        </tbody>
+      </table>
+      <div class="pagination"></div>
+    </section>
+  </main>
+</body>
+
+<!-- Axios CDN -->
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<!-- script para mostrar los productos -->
+<script src="mostrarDescuentos.js"></script>
+<script src="eliminarDescuento.js"></script>
+ 
+<!--  Aquí se crea la ventana superpuesta de eliminar.... -->
+<!-- Eliminar sobre modulo -->
+<div class="modal" id="modalEliminar" style="display: none;">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2>Eliminar Descuento</h2>
+        </div>
+        <div class="modal-body">
+            <p class="pregunta"><strong>¿Seguro que desea eliminar este descuento?</strong></p>
+            <p class="nombre">ID del descuento: <strong id="idDescuentoEliminar"></strong></p>
+            <div class="botones">
+                <button class="cancelar" onclick="cerrarModalEliminar()">Cancelar</button>
+                <button class="eliminar">Eliminar</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- abrir y cerrar Eliminar -->
+<script>
+function abrirModalEliminar(id) {
+    const modal = document.getElementById('modalEliminar');
+    modal.style.display = 'flex';
+    setTimeout(() => modal.classList.add('show'), 10);
+    document.getElementById('idDescuentoEliminar').textContent = id;
+}
+
+function cerrarModalEliminar() {
+    const modal = document.getElementById('modalEliminar');
+    modal.classList.remove('show');
+    setTimeout(() => {
+        modal.style.display = 'none';
+    }, 300);
+}
+</script>
+</html>

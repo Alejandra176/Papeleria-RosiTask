@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Información de Usuario</title>
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+<link
+	href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+	rel="stylesheet" />
+<link rel="stylesheet" href="estilo-mostrarUsuario.css" />
+</head>
+<body>
+	<div class="usuario-container">
+		<div class="usuario-header">
+			<h1>
+				<i class="fas fa-user-circle"></i> Información del Usuario
+			</h1>
+		</div>
+
+		<div class="usuario-card">
+			<div class="usuario-avatar">
+				<i class="fas fa-user-tie"></i>
+			</div>
+
+			<div class="usuario-info">
+				<div class="info-item">
+					<span class="info-label"><i class="fas fa-id-card"></i> ID:</span>
+					<span class="info-value" id="idUsuario">1</span>
+				</div>
+
+				<div class="info-item">
+					<span class="info-label"><i class="fas fa-envelope"></i>
+						Correo:</span> <input type="email" id="correo" class="info-value"
+						disabled />
+				</div>
+
+				<div class="info-item">
+					<span class="info-label"><i class="fas fa-key"></i>
+						Contraseña:</span> <input type="password" id="contrasena"
+						class="info-value" disabled />
+					<button class="show-password" onclick="togglePassword()">
+						<i class="fas fa-eye"></i>
+					</button>
+				</div>
+
+				<div class="info-item">
+					<span class="info-label"><i class="fas fa-user-tag"></i>
+						Rol:</span> <input type="text" id="rol" class="info-value" disabled />
+				</div>
+			</div>
+
+			<div class="usuario-actions">
+				<button class="btn-editar" onclick="habilitarEdicion()">
+					<i class="fas fa-edit"></i> Editar
+				</button>
+				<button class="btn-guardar" onclick="guardarCambios()"
+					style="display: none;">
+					<i class="fas fa-save"></i> Guardar
+				</button>
+			
+				<button class="btn-cerrar"
+					onclick="window.location.href='seleccionModulo.html'">
+					<i class="fas fa-times"></i> Cerrar
+				</button>
+				<button class="btn-cerrar-sesion" onclick="cerrarSesion()">
+					<i class="fas fa-sign-out-alt"></i> Cerrar Sesión
+				</button>
+
+			</div>
+
+		</div>
+	</div>
+
+	<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+	<script src="mostrarUsuario.js"></script>
+
+</body>
+</html>

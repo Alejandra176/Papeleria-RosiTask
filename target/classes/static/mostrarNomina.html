@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Módulo Nomina</title>
+
+<!-- Google Fonts: Inter -->
+<link
+	href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+	rel="stylesheet" />
+
+<!-- PrimeIcons -->
+<link rel="stylesheet"
+	href="https://unpkg.com/primeicons@6.0.0/primeicons.css" />
+
+
+<!-- Estilos -->
+<link rel="stylesheet" href="estilo-mostrarNomina.css" />
+<!-- libreria para las alertas con estilo   -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+</head>
+<body>
+	<header class="header">
+		<div class="logo">
+
+			<img src="https://cdn-icons-png.flaticon.com/512/12317/12317792.png"
+				alt="icono" />
+			<h1>Módulo Nomina</h1>
+
+		</div>
+		<div class="acciones-header">
+			<i class="pi pi-bell" title="Notificaciones"></i> <i
+				class="pi pi-times-circle" title="Cerrar"
+				onclick="window.location.href='seleccionModulo.html'"></i>
+		</div>
+
+	</header>
+	<main class="main">
+		<section class="box">
+			<h2>Lista de empleados</h2>
+
+			<a href="registrarEmpleado.html">
+				<button class="btn-registrar">Registrar Empleado</button>
+			</a>
+
+			<div class="barra-busqueda">
+				<i class="pi pi-search"></i> <input type="text"
+					placeholder="Buscar por ID" id="buscar-id" />
+				<!--<button id="btn-buscar">Buscar</button>-->
+			</div>
+
+
+
+			<table class="tabla-empleados">
+				<thead>
+					<tr>
+						<th>ID</th>
+						<th>Nombre</th>
+						<th>Apellido</th>
+						<th>Tipo Documento</th>
+						<th>Documento</th>
+						<th>Estado</th>
+						<th>Acciones</th>
+					</tr>
+				</thead>
+				<tbody id="tbody-empleados">
+					<!-- Aquí se insertarán dinámicamente los empleados -->
+				</tbody>
+			</table>
+
+			<div class="pagination"></div>
+
+			<div class="exportar">
+				<!-- <button class="btn-pdf">Exportar a PDF</button> -->
+				<button id="btnExportarPDF" class="btn-pdf">Exportar a PDF</button>
+			</div>
+		</section>
+	</main>
+	<!-- MODAL ELIMINAR EMPLEADO -->
+	<div class="modal" id="modalEliminar" style="display: none;">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h2>Eliminar Empleado</h2>
+			</div>
+			<div class="modal-body">
+				<p class="pregunta">
+					<strong>¿Seguro que desea eliminar este empleado?</strong>
+				</p>
+				<p class="nombre">
+					ID del empleado: <strong id="idEmpleadoEliminar"></strong>
+				</p>
+				<div class="botones">
+					<button class="cancelar" onclick="cerrarModalEliminar()">Cancelar</button>
+					<button class="eliminar">Eliminar</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- abrir y cerrar Eliminar -->
+	<script>
+function abrirModalEliminar(id) {
+    const modal = document.getElementById('modalEliminar');
+    modal.style.display = 'flex';
+    setTimeout(() => modal.classList.add('show'), 10);
+    document.getElementById('idEmpleadoEliminar').textContent = id;
+}
+
+function cerrarModalEliminar() {
+    const modal = document.getElementById('modalEliminar');
+    modal.classList.remove('show');
+    setTimeout(() => {
+        modal.style.display = 'none';
+    }, 300);
+}
+</script>
+	<!-- Axios debe ir primero -->
+	<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.28/jspdf.plugin.autotable.min.js"></script>
+
+<script>
+  document.getElementById('btnExportarPDF').addEventListener('click', async () => {
+    try {
+      const response = await axios.get('http://localhost:8282/nomina/getAll');
+      const empleados = response.data;
+
+      const { jsPDF } = window.jspdf;
+      const doc = new jsPDF();
+
+      // Título centrado
+      doc.setFontSize(18);
+      doc.setTextColor(102, 51, 153); // Morado oscuro
+      doc.text('Lista de Empleados', 105, 20, { align: 'center' });
+
+      // Cabeceras de la tabla
+      const headers = [[
+        'ID', 'Nombre', 'Apellido', 'Tipo Doc', 'Documento', 
+        'Nacimiento', 'Dirección', 'Teléfono', 'Correo', 
+        'Cargo', 'Salario', 'Ingreso', 'Estado'
+      ]];
+
+      // Datos
+      const rows = empleados.map(emp => ([
+        emp.idEmpleado,
+        emp.nombreEmpleado,
+        emp.apellidoEmpleado,
+        emp.tipoDocumento,
+        emp.numeroDocumento,
+        emp.fechaNacimiento,
+        emp.direccion,
+        emp.telefono,
+        emp.correo,
+        emp.cargo,
+        emp.salario,
+        emp.fechaIngreso,
+        emp.estado
+      ]));
+
+      
+     
+      // Tabla con colores morados
+      doc.autoTable({
+        startY: 30,
+        head: headers,
+        body: rows,
+        styles: {
+          fontSize: 8,
+          textColor: 0, // texto negro
+        },
+        headStyles: {
+          fillColor: [102, 51, 153], // morado oscuro
+          textColor: 255, // blanco
+          fontStyle: 'bold'
+        },
+        alternateRowStyles: {
+          fillColor: [230, 220, 250] // lila claro
+        },
+        margin: { top: 30 }
+      });
+
+      doc.save('Lista_Empleados.pdf');
+    } catch (error) {
+      console.error('Error al exportar:', error);
+      Swal.fire('Error', 'No se pudo exportar la nómina a PDF', 'error');
+    }
+  });
+</script>
+
+</body>
+<!-- Axios CDN -->
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<!-- script para mostrar los productos -->
+<script src="mostrarNomina.js"></script>
+<script src="eliminarEmpleado.js"></script>
+</html>

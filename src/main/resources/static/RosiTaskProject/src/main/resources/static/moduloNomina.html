@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Módulo Nomina</title>
+
+  <!-- Google Fonts: Inter -->
+<link
+	href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+	rel="stylesheet" />
+	
+ <!-- PrimeIcons -->
+<link rel="stylesheet"
+	href="https://unpkg.com/primeicons@6.0.0/primeicons.css" />
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="estilo-moduNomina.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="logo">
+      <img src="https://cdn-icons-png.flaticon.com/512/5529/5529124.png" alt="icono" />
+      <h1>Módulo Nómina</h1>
+    </div>
+    <div class="acciones-header">
+      <i class="pi pi-bell" title="Notificaciones"></i>
+      <i class="pi pi-arrow-left" title="Regresar"></i>
+      <i class="pi pi-times-circle" title="Cerrar"></i>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="box">
+      <h2>Lista de empleados</h2>
+
+      <a href="registrarEmpleado.html">
+        <button class="btn-registrar">Registrar empleado</button>
+      </a>
+
+      <div class="barra-busqueda">
+				<i class="pi pi-search"></i> <input type="text" placeholder="Buscar" />
+			</div>
+
+      <table class="tabla-empleados">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Tipo Documento</th>
+            <th>Documento</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody id="tbody-empleados">
+          <!-- Aquí se insertarán dinámicamente los empleados -->
+        </tbody>
+      </table>
+
+      <div class="exportar">
+        <button class="btn-pdf">Exportar a PDF</button>
+        <button class="btn-excel">Exportar a Excel</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- Axios CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <!-- script para mostrar los empleados -->
+  <script src="mostrarEmpleados.js"></script>
+  <script src="eliminarEmpleado.js"></script>
+</body>
+</html>

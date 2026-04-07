@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Registrar Proveedor</title>
+<style>
+body {
+	font-family: Arial, sans-serif;
+	background-color: #dff9c9;
+	margin: 0;
+	min-height: 100vh;
+}
+
+.container {
+	padding: 40px;
+}
+
+.form-container {
+	background-color: #fff;
+	padding: 40px;
+	margin: 0 auto;
+	width: 90%;
+	max-width: 1100px;
+	border: 1px solid #c9f1c5;
+}
+
+h1 {
+	color: #3c0066;
+	margin-bottom: 30px;
+}
+
+.form-grid {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 20px 40px;
+}
+
+label {
+	display: block;
+	margin-bottom: 5px;
+	font-weight: bold;
+	color: #000;
+	letter-spacing: 1px;
+}
+
+input, select, textarea {
+	width: 100%;
+	padding: 8px 12px;
+	border: 1px solid #ccc;
+	font-size: 16px;
+	color: #3c0066;
+}
+
+input[readonly] {
+	background-color: #eee;
+}
+
+.buttons {
+	text-align: center;
+	margin-top: 30px;
+}
+
+.buttons button {
+	padding: 12px 40px;
+	margin: 0 20px;
+	font-size: 18px;
+	border: 2px solid #3c0066;
+	border-radius: 10px;
+	cursor: pointer;
+}
+
+.register {
+	background-color: #ccffd9;
+}
+
+.cancel {
+	background-color: #ffb6c1;
+}
+</style>
+</head>
+<body>
+	<div class="container">
+		<div class="form-container">
+			<h1>Registrar Proveedor</h1>
+			<div class="form-grid">
+				<div>
+					<label for="idProveedor">ID Proveedor</label> <input type="text"
+						id="idProveedor" readonly> <label for="nombre">Nombre
+						proveedor</label> <input type="text" id="nombre"> <label
+						for="tipoDocumento">Tipo Documento</label> <select
+						id="tipoDocumento">
+						<option value="" disabled selected>Seleccione una opción</option>
+						<option>Cédula</option>
+						<option>NIT</option>
+						<option>Pasaporte</option>
+					</select> <label for="numeroDocumento">Número Documento</label> <input
+						type="text" id="numeroDocumento"> <label for="ciudad">Ciudad</label>
+					<input type="text" id="ciudad"> <label for="direccion">Dirección</label>
+					<input type="text" id="direccion">
+				</div>
+
+				<div>
+					<label for="telefono">Teléfono</label> <input type="text"
+						id="telefono"> <label for="correo">Correo</label> <input
+						type="email" id="correo"> <label for="fechaIngreso">Fecha
+						de Ingreso</label> <input type="text" id="fechaIngreso"
+						placeholder="dd-mm-aaaa" readonly> <label
+						for="observaciones">Observaciones</label>
+					<textarea id="observaciones" rows="6"></textarea>
+				</div>
+			</div>
+
+			<div class="buttons">
+				<button class="register">Registrar</button>
+				<button class="cancel">Cancelar</button>
+			</div>
+		</div>
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+	<script src="registrarProveedor.js"></script>
+
+</body>
+</html>
